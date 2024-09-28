@@ -1,0 +1,18 @@
+{
+    "objects": [
+        {
+            "id": "OBJECT_0",
+            "brochureName": "Horloge",
+            "brochureText": "Une belle horloge authentique du XIVe",
+            "carnetName": "Horloge du XVe",
+            "carnetText": "Ce type d'horloge apparait au XVe"
+        },
+        {
+            "id": "OBJECT_1",
+            "brochureName": "Une lampe à gaz",
+            "brochureText": "Lampe très jolie",
+            "carnetName": "Lampes à gaz",
+            "carnetText": "Les lampes à gaz, blah blah"
+        }
+    ]
+}

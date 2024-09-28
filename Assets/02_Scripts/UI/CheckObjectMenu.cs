@@ -45,11 +45,27 @@ public class CheckObjectMenu : MonoBehaviour
     }
 
     //TODO passer en parametre la classe avec tt les info pour hydrater tt
-    public void HydrateAndShow( int id)
+    public void HydrateAndShow( int idAsInt)
     {
-        this.idObject = id;
-        //brochure.Hydrate()
-        //carnet.Hydrate()
+        this.idObject = idAsInt;
+        // TODO passer le param de cette methode depuis int vers string.
+        string id = "OBJECT_" + idAsInt;
+
+        // TODO à mettre lors l'initialisation du jeu;
+        DataBase.LoadData();
+
+        ObjectInfo obj;
+        if (DataBase.data.objects.Exists(o => o.id == id)) {
+            obj = DataBase.data.objects.Find(o => o.id == id);
+        } else {
+            Debug.LogError("Can't find an object which id is " + id + ". Use the first in the list to avoid a crash.");
+            obj = DataBase.data.objects[0];
+        }
+
+        brochure.Hydrate(null, obj.brochureName, obj.brochureText);
+
+        var sprite = DataBase.sprites[obj.id];
+        carnet.Hydrate(sprite, obj.carnetName, obj.carnetText);
 
         OpenCarnet(false);
         OpenBrochure(true);
