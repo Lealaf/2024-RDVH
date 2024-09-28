@@ -64,12 +64,10 @@ public class CheckObjectMenu : MonoBehaviour
             obj = DataBase.data.objects[0];
         }
 
-        brochure.Hydrate(null);
-
         var sprite = DataBase.sprites[obj.ID];
         carnet.Hydrate(sprite, obj.nom, obj.description);
 
-        OpenCarnet(false);
+        OpenCarnet(true);
         OpenBrochure(true);
 
         //TODO
