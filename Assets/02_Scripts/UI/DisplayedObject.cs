@@ -31,6 +31,7 @@ public class ManageObjectClick : MonoBehaviour
     {
         if (!interactible) return;
         foreach (Material mat in mats) {
+            //Debug.Log("AA"+ mat);
             mat.SetInt("_hover", 1);
         }
     }
