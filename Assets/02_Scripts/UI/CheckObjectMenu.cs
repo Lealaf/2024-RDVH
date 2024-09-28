@@ -21,9 +21,9 @@ public class CheckObjectMenu : MonoBehaviour
     UnityEvent PutBackEvent;
 
     [SerializeField]
-    UnityEvent<int> ReportEvent;
+    UnityEvent<string> ReportEvent;
 
-    int idObject;
+    string idObject;
 
     public void OpenCarnet(bool open)
     {
@@ -45,11 +45,9 @@ public class CheckObjectMenu : MonoBehaviour
     }
 
     //TODO passer en parametre la classe avec tt les info pour hydrater tt
-    public void HydrateAndShow( int idAsInt)
+    public void HydrateAndShow(string id)
     {
-        this.idObject = idAsInt;
-        // TODO passer le param de cette methode depuis int vers string.
-        string id = "OBJECT_" + idAsInt;
+        this.idObject = id;
 
         // TODO à mettre lors l'initialisation du jeu;
         DataBase.LoadData();
