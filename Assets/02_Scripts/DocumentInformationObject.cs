@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class Brochure : MonoBehaviour
+public class DocumentInformationObject : MonoBehaviour
 {
     [SerializeField]
     Image image;
@@ -16,18 +16,11 @@ public class Brochure : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI objectDescriptionText;
 
-    [SerializeField]
-    UnityEvent PutBackEvent;
-
-    [SerializeField]
-    UnityEvent<int> ReportEvent;
-
-    int idObject;
 
 
-    public void Hydrate(int id, Sprite sprite, string name, string descriptionText)
+
+    public void Hydrate(Sprite sprite, string name, string descriptionText)
     {
-        this.idObject = id;
         image.sprite = sprite;
         this.objectName.text = name;
         this.objectDescriptionText.text = descriptionText;
@@ -44,14 +37,6 @@ public class Brochure : MonoBehaviour
         
     }
 
-    public void PutBack()
-    {
-        PutBackEvent?.Invoke();
-    }
 
-    public void Report()
-    {
-        ReportEvent?.Invoke(idObject);
-    }
 
 }
