@@ -9,13 +9,18 @@ public class CheckObjectMenu : MonoBehaviour
     CanvasGroup canvasGroup;
 
     [SerializeField]
-    DocumentInformationObject brochure;
+    Brochure brochure;
 
     [SerializeField]
     DocumentInformationObject carnet;
 
     [SerializeField]
     GameObject viewver;
+
+    [SerializeField]
+    GameObject menuBrochure;
+    [SerializeField]
+    GameObject menuCarnet;
 
     [SerializeField]
     UnityEvent PutBackEvent;
@@ -28,12 +33,14 @@ public class CheckObjectMenu : MonoBehaviour
     public void OpenCarnet(bool open)
     {
         carnet.gameObject.SetActive(open);
+        menuCarnet.SetActive(!open);
 
     }
 
     public void OpenBrochure(bool open)
     {
         brochure.gameObject.SetActive(open);
+        menuBrochure.SetActive(!open);
     }
 
     public void CloseAll()
@@ -57,7 +64,7 @@ public class CheckObjectMenu : MonoBehaviour
             obj = DataBase.data.objects[0];
         }
 
-        brochure.Hydrate(null, obj.nom, obj.description);
+        brochure.Hydrate(null);
 
         var sprite = DataBase.sprites[obj.ID];
         carnet.Hydrate(sprite, obj.nom, obj.description);
