@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sol
+  m_Name: Bois
   m_Shader: {fileID: -6465566751694194690, guid: 604743019fce5b1499db799fe47234b1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -33,7 +33,7 @@ Material:
     - _intensity: 6.2
     - _power: 4.81
     m_Colors:
-    - _BaseColor: {r: 0.5471698, g: 0.5145611, b: 0.4723211, a: 0}
+    - _BaseColor: {r: 0.7075472, g: 0.49353817, b: 0.42386082, a: 0}
     - _hoverColor: {r: 0.22623697, g: 0.57539415, b: 0.5849056, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &622600838121281514
