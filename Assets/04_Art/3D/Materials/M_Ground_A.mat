@@ -36,6 +36,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _MatA_TextureBC:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatB_TextureBC:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_ee1e91fa9bb6446abde5736c65f59b23_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 1ecca4f7aecaca1468a9caa29aa36e80, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -48,6 +56,9 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
+    - _Blend_Opacity: 0
+    - _Mat_A_Uses_Texture: 0
+    - _Mat_B_Uses_texture: 0
     - _Metallic: 0
     - _NoiseOpacity: 0.12
     - _NoiseTiling: -0.2
