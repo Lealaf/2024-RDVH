@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sol
+  m_Name: Horloge-metal
   m_Shader: {fileID: -6465566751694194690, guid: 604743019fce5b1499db799fe47234b1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -27,13 +27,13 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _Metallic: 0
-    - _Smoothness: 0
+    - _Metallic: 1
+    - _Smoothness: 0.72
     - _hover: 0
     - _intensity: 6.2
     - _power: 4.81
     m_Colors:
-    - _BaseColor: {r: 0.5471698, g: 0.5145611, b: 0.4723211, a: 0}
+    - _BaseColor: {r: 0.631, g: 0.43917596, b: 0.35840797, a: 1}
     - _hoverColor: {r: 0.22623697, g: 0.57539415, b: 0.5849056, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &622600838121281514

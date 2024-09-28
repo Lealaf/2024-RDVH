@@ -50,14 +50,14 @@ Material:
     - _BUILTIN_QueueOffset: 0
     - _Metallic: 0
     - _NoiseOpacity: 0.12
-    - _NoiseTiling: 0.1
+    - _NoiseTiling: -0.2
     - _Smoothness: 0.5
     - _Smoothness_A: 0.5
     - _Smoothness_B: 0
     - _UseTriplanarNoise: 1
     - _VP_Contrast: 1
     m_Colors:
-    - _BaseColor_B: {r: 0.8679245, g: 0.7616123, b: 0.5608757, a: 0}
-    - _BaseColor_B_1: {r: 0.5943396, g: 0.56350124, b: 0.56350124, a: 0}
+    - _BaseColor_B: {r: 0.46226418, g: 0.43760785, b: 0.3554201, a: 0}
+    - _BaseColor_B_1: {r: 0.4245283, g: 0.32278264, b: 0.23028658, a: 0}
     - _Noise_color: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 0}
   m_BuildTextureStacks: []
