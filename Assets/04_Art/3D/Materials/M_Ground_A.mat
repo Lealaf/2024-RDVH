@@ -57,7 +57,7 @@ Material:
     - _UseTriplanarNoise: 1
     - _VP_Contrast: 1
     m_Colors:
-    - _BaseColor_B: {r: 0.8679245, g: 0.7616123, b: 0.5608757, a: 0}
-    - _BaseColor_B_1: {r: 0.5943396, g: 0.56350124, b: 0.56350124, a: 0}
+    - _BaseColor_B: {r: 0.8666667, g: 0.7954302, b: 0.56078434, a: 0}
+    - _BaseColor_B_1: {r: 0.2830189, g: 0.13750447, b: 0.13750447, a: 0}
     - _Noise_color: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 0}
   m_BuildTextureStacks: []
