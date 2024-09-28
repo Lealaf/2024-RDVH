@@ -12,6 +12,11 @@ public class AudioManagerVolumeSetter : MonoBehaviour
 
     void Start()
     {
+        setLevels();
+    }
+
+    public void setLevels()
+    {
         masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 0.75f);
         sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume", 0.75f);
         musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 0.75f);
