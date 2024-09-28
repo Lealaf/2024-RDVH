@@ -78,6 +78,8 @@ public class CheckObjectMenu : MonoBehaviour
 
     public void PutBack()
     {
+        OpenCarnet(false);
+        OpenBrochure(false);
         PutBackEvent?.Invoke();
     }
 
