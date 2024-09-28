@@ -5,9 +5,9 @@ using UnityEngine;
 [System.Serializable]
 public class ObjectInfo
 {
-    public string id;
-    public string brochureName;
-    public string brochureText;
-    public string carnetName;
-    public string carnetText;
+    public string ID;
+    public string nom;
+    public string description;
+    public string type;
+    public string siecle;
 }

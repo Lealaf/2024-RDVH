@@ -14,6 +14,10 @@ public class DataBase
     static Sprite LoadSprite(string id)
     {
         var filePath = Application.streamingAssetsPath + "/data/images/carnet/" + id + ".png";
+        if (!File.Exists(filePath)) {
+            Debug.LogError("Can't the image for object which id is " + id + ". The expected file shloud is " + filePath + ". Use a default one to avoid a crash.");
+            filePath = Application.streamingAssetsPath + "/data/images/carnet/not_available.png";
+        }
         // Converts desired path into byte array
         byte[] pngBytes = System.IO.File.ReadAllBytes(filePath);
 
@@ -35,8 +39,8 @@ public class DataBase
         sprites = new Dictionary<string, Sprite>();
         foreach (var obj in data.objects)
         {
-            Sprite sprite = LoadSprite(obj.id);
-            sprites.Add(obj.id, sprite);
+            Sprite sprite = LoadSprite(obj.ID);
+            sprites.Add(obj.ID, sprite);
         }
     }
 }

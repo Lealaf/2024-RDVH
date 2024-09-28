@@ -49,21 +49,18 @@ public class CheckObjectMenu : MonoBehaviour
     {
         this.idObject = id;
 
-        // TODO à mettre lors l'initialisation du jeu;
-        DataBase.LoadData();
-
         ObjectInfo obj;
-        if (DataBase.data.objects.Exists(o => o.id == id)) {
-            obj = DataBase.data.objects.Find(o => o.id == id);
+        if (DataBase.data.objects.Exists(o => o.ID == id)) {
+            obj = DataBase.data.objects.Find(o => o.ID == id);
         } else {
             Debug.LogError("Can't find an object which id is " + id + ". Use the first in the list to avoid a crash.");
             obj = DataBase.data.objects[0];
         }
 
-        brochure.Hydrate(null, obj.brochureName, obj.brochureText);
+        brochure.Hydrate(null, obj.nom, obj.description);
 
-        var sprite = DataBase.sprites[obj.id];
-        carnet.Hydrate(sprite, obj.carnetName, obj.carnetText);
+        var sprite = DataBase.sprites[obj.ID];
+        carnet.Hydrate(sprite, obj.nom, obj.description);
 
         OpenCarnet(false);
         OpenBrochure(true);
