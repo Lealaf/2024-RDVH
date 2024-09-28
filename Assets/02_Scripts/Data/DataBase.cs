@@ -126,7 +126,7 @@ static class SaveLoad<T>
         string jsonData;
 
         // convert the byte array to json
-        jsonData = Encoding.ASCII.GetString(jsonDataAsBytes);
+        jsonData = Encoding.UTF8.GetString(jsonDataAsBytes);
 
         // convert to the specified object type
         T returnedData = JsonUtility.FromJson<T>(jsonData);
