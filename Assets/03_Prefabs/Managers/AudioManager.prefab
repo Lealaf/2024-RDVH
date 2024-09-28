@@ -304,13 +304,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: 7b01a82a354d4d84593575050990e086, type: 2}
+  volumeSetter: {fileID: 0}
   SFXSource: {fileID: 172076333345793760}
   music1: {fileID: 2375888441563803490}
   music2: {fileID: 2964979494330708010}
   Musics:
   - {fileID: 8300000, guid: 622d52acecf0fdd4caabe9382c8a3b29, type: 3}
   - {fileID: 8300000, guid: ace1e008189fa154bb66a257cbe58d89, type: 3}
-  menuSFXs: []
+  menuSFXs:
+  - {fileID: 8300000, guid: e2e80174d13b9404d80936899d5a6811, type: 3}
 --- !u!1 &8853867673863171616
 GameObject:
   m_ObjectHideFlags: 0
