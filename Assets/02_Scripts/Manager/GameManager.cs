@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         menuManager.ShowStartMenu();
+        DataBase.LoadData();
     }
 
     // Update is called once per frame
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        AudioManager.Instance.playMusic(AudioManager.music.game1);
         menuManager.ShowInGameMenu();
     }
 

@@ -9,7 +9,7 @@ public class CheckObjectMenu : MonoBehaviour
     CanvasGroup canvasGroup;
 
     [SerializeField]
-    DocumentInformationObject brochure;
+    Brochure brochure;
 
     [SerializeField]
     DocumentInformationObject carnet;
@@ -18,22 +18,29 @@ public class CheckObjectMenu : MonoBehaviour
     GameObject viewver;
 
     [SerializeField]
+    GameObject menuBrochure;
+    [SerializeField]
+    GameObject menuCarnet;
+
+    [SerializeField]
     UnityEvent PutBackEvent;
 
     [SerializeField]
-    UnityEvent<int> ReportEvent;
+    public UnityEvent<string> ReportEvent;
 
-    int idObject;
+    string idObject;
 
     public void OpenCarnet(bool open)
     {
         carnet.gameObject.SetActive(open);
+        menuCarnet.SetActive(!open);
 
     }
 
     public void OpenBrochure(bool open)
     {
         brochure.gameObject.SetActive(open);
+        menuBrochure.SetActive(!open);
     }
 
     public void CloseAll()
@@ -45,13 +52,22 @@ public class CheckObjectMenu : MonoBehaviour
     }
 
     //TODO passer en parametre la classe avec tt les info pour hydrater tt
-    public void HydrateAndShow( int id)
+    public void HydrateAndShow(string id)
     {
         this.idObject = id;
-        //brochure.Hydrate()
-        //carnet.Hydrate()
 
-        OpenCarnet(false);
+        ObjectInfo obj;
+        if (DataBase.data.objects.Exists(o => o.ID == id)) {
+            obj = DataBase.data.objects.Find(o => o.ID == id);
+        } else {
+            Debug.LogError("Can't find an object which id is " + id + ". Use the first in the list to avoid a crash.");
+            obj = DataBase.data.objects[0];
+        }
+
+        var sprite = DataBase.sprites[obj.ID];
+        carnet.Hydrate(sprite, obj.nom, obj.description);
+
+        OpenCarnet(true);
         OpenBrochure(true);
 
         //TODO
@@ -64,11 +80,15 @@ public class CheckObjectMenu : MonoBehaviour
 
     public void PutBack()
     {
+        OpenCarnet(false);
+        OpenBrochure(false);
         PutBackEvent?.Invoke();
     }
 
     public void Report()
     {
+        OpenCarnet(false);
+        OpenBrochure(false);
         ReportEvent?.Invoke(idObject);
     }
 

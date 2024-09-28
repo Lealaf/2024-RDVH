@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance => instance;
 
     public AudioMixer mixer;
+    public AudioManagerVolumeSetter volumeSetter;
 
     public AudioSource SFXSource;
     public AudioSource music1;
@@ -67,6 +68,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        volumeSetter.setLevels();
         playMusic(music.menu);
     }
 
@@ -123,7 +125,7 @@ public class AudioManager : MonoBehaviour
                 clip = Musics[3];
                 break;
             case music.game1:
-                clip = Musics[0];
+                clip = Musics[1];
                 break;
             case music.game2:
                 fade = true;
