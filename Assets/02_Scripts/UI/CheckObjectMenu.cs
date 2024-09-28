@@ -31,12 +31,7 @@ public class CheckObjectMenu : MonoBehaviour
     public void HydrateAndShow(string id)
     {
         this.idObject = id;
-
-        
-        
-
-        //TODO
-        //viewver.SetActive(true);
+        Show(true);
     }
 
 
@@ -50,6 +45,7 @@ public class CheckObjectMenu : MonoBehaviour
     public void Report()
     {
         Show(false);
+        GameState.CollectObject(idObject);
         ReportEvent?.Invoke(idObject);
     }
 
