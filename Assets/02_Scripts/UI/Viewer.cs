@@ -36,4 +36,10 @@ public class Viewer : MonoBehaviour
         var vecRot = new Vector3(anchorPos.y, -anchorPos.x, 0) * Time.deltaTime * speed;
         gameObjectToRotate.transform.Rotate(vecRot, Space.World);
     }
+
+
+    public void switchObject(GameObject newObject)
+    {
+
+    }
 }
