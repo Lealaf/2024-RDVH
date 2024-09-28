@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     {
         menuManager.ShowStartMenu();
         DataBase.LoadData();
+        GameState.Init();
     }
 
     // Update is called once per frame

@@ -1,34 +1,47 @@
+using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 public class ManageObjectClick : MonoBehaviour
 {
     [SerializeField]
     public CheckObjectMenu checkObjectMenu;
 
-    private Material[] mat;
+    private List<Material> mats = new List<Material>();
+    public bool interactible = false;
     void Start()
     {
         checkObjectMenu.ReportEvent.AddListener(HideMeMaybe);
-        mat = gameObject.GetComponentInChildren<MeshRenderer>().materials;
+        MeshRenderer[] meshRenderers = gameObject.GetComponentsInChildren<MeshRenderer>();
+        foreach (MeshRenderer meshRenderer in meshRenderers)
+        {
+            foreach (Material mat in meshRenderer.materials)
+            {
+                mats.Add(mat);
+            }
+        }
     }
     void OnMouseDown()
     {
+        if (!interactible) return;
         checkObjectMenu.HydrateAndShow(name);
     }
 
     private void OnMouseOver()
     {
-        Debug.Log(" => " + mat.Length);
-        for(int i = 0; i < mat.Length; i++)
-        {
-            mat[i].SetInt("_hover", 1);
+        if (!interactible) return;
+        foreach (Material mat in mats) {
+            //Debug.Log("AA"+ mat);
+            mat.SetInt("_hover", 1);
         }
     }
 
     private void OnMouseExit()
     {
-        for (int i = 0; i < mat.Length; i++)
+        if (!interactible) return;
+        foreach (Material mat in mats)
         {
-            mat[i].SetInt("_hover", 0);
+            mat.SetInt("_hover", 0);
         }
     }
 
