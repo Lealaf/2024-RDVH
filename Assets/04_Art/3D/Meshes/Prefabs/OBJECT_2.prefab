@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3048269938941303038}
   - component: {fileID: 4984496044433590508}
   m_Layer: 0
-  m_Name: P_Horloge
+  m_Name: OBJECT_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
