@@ -1365,6 +1365,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e13f54ab64e2814092d295e907a6532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &1959714857 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8747110515070106929, guid: 9cbdfc304a386eb429dd4799d283d465, type: 3}
+  m_PrefabInstance: {fileID: 5449019099005226769}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2076237446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1724,6 +1729,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f006558ed2de4da438ac2a8356f10de8, type: 3}
+--- !u!1 &1940737261798575852 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2835126190904057143, guid: f006558ed2de4da438ac2a8356f10de8, type: 3}
+  m_PrefabInstance: {fileID: 1940737261798575851}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5449019099005226769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1892,6 +1902,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6565135119438500181, guid: 9cbdfc304a386eb429dd4799d283d465, type: 3}
+      propertyPath: gameObject
+      value: 
+      objectReference: {fileID: 1940737261798575852}
+    - target: {fileID: 6565135119438500181, guid: 9cbdfc304a386eb429dd4799d283d465, type: 3}
+      propertyPath: rectRefForRotate
+      value: 
+      objectReference: {fileID: 1959714857}
+    - target: {fileID: 6565135119438500181, guid: 9cbdfc304a386eb429dd4799d283d465, type: 3}
+      propertyPath: gameObjectToRotate
+      value: 
+      objectReference: {fileID: 1940737261798575852}
     - target: {fileID: 7007047287439264516, guid: 9cbdfc304a386eb429dd4799d283d465, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
