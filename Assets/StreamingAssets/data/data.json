@@ -17,7 +17,7 @@
         {
             "ID": "OBJECT_3",
             "nom": "Miroir au mercure",
-            "description": "Le miroir au mercure est un objet dont la surface est suffisamment lisse pour refléter une image réputés pour sa clarté exceptionnelle. Les artisans vénitiens ont développé une technique innovante pour fabriquer ces miroirs en recouvrant du verre d'un amalgame d'étain et de mercure. Le processus consistait d'abord à aplatir le verre en plaques, puis à y appliquer plusieurs couches d'étain, soigneusement poncées pour obtenir une surface lisse. Ensuite, une fine couche de mercure était déposée et encore une fois lissée à l'aide d'une pierre et de tampons de laine. Ce procédé, véritable prouesse technique, s'est ensuite répandu dans toute l'Europe.",
+            "description": "Le miroir au mercure est un objet dont la surface est suffisamment lisse pour refléter une image réputés pour sa clarté exceptionnelle. Les artisans vénitiens ont développé une technique innovante pour fabriquer ces miroirs en recouvrant du verre d'un amalgame d'étain et de mercure. Le processus consistait d'abord à aplatir le verre en plaques, puis à y appliquer plusieurs couches d'étain, soigneusement poncées pour obtenir une surface lisse. Ensuite, une fine couche de mercure était déposée et encore une fois lissée à l'aide d'une pierre et de tampons de laine. Ce procédé, véritable prouesse technique développé à Venise, s'est ensuite répandu dans toute l'Europe.",
             "type": "anachronique",
             "siècle d'invention": "Milieu XVIe (se repend au XVIIe)"
         },
@@ -31,14 +31,14 @@
         {
             "ID": "OBJECT_5",
             "nom": "Lunette astronomique",
-            "description": "Les lunettes astronomiques sont des instruments conçus pour observer le ciel, permettant de grossir jusqu'à 20 fois la vision normale. Elles sont composées d'un tube principal et de deux parties importantes : l'objectif, qui capte la lumière, et l'oculaire, par lequel on observe. Ce système optique a révolutionné l'astronomie en offrant de nouvelles perspectives sur la Lune, les étoiles et les planètes. Grâce à elles, des découvertes majeures ont été réalisées, changeant notre compréhension de l'univers et ovrant une nouvelle ère dans l’exploration du cosmos.",
+            "description": "Les lunettes astronomiques sont des instruments conçus pour observer le ciel, permettant de grossir jusqu'à 20 fois la vision normale. Elles sont composées d'un tube principal et de deux parties importantes : l'objectif, qui capte la lumière, et l'oculaire, par lequel on observe. Ce système optique a révolutionné l'astronomie en offrant de nouvelles perspectives sur la Lune, les étoiles et les planètes. Grâce à elles, des découvertes majeures ont été réalisées, changeant notre compréhension de l'univers et ouvrant une nouvelle ère dans l’exploration du cosmos.",
             "type": "anachronique",
             "siècle d'invention": "Début du XVIIe"
         },
         {
             "ID": "OBJECT_6",
             "nom": "Carte postale",
-            "description": "<vide>",
+            "description": "La carte postale est un moyen simple et pratique de correspondance, constitué d'un morceau de carton rectangulaire, dont les dimensions peuvent varier. Elle permet d'envoyer un message bref sans enveloppe, avec un espace dédié à l'adresse et au timbre. Les cartes postales se popularisent grâce à l'ajout d'illustrations, rendues possibles par les progrès de la photo-mécanisation. Cela permet de proposer une grande variété de décors, transformant les cartes postales en souvenirs visuels autant qu'en moyen de communication.",
             "type": "anachronique",
             "siècle d'invention": "XIXe siècle"
         },
@@ -66,7 +66,7 @@
         {
             "ID": "OBJECT_10",
             "nom": "Timbre",
-            "description": "<vide>",
+            "description": "Le timbre marque l'apparition d'un nouveau système de taxation du courrier, où l'expéditeur paye les frais d'envoi selon une tarification simplifiée. D'abord instauré en Angleterre, ce système s'est rapidement répandu dans les autres pays. Le timbre, généralement de forme rectangulaire avec des dentelures, symbolise l'uniformisation des tarifs postaux sur un territoire. Les timbres sont devenus de véritables objets d'art, ornés de portraits de souverains, de figures allégoriques ou de symboles nationaux, alliant fonctionnalité et esthétique.",
             "type": "anachronique",
             "siècle d'invention": "XIXe siècle"
         }
