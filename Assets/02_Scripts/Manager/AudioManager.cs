@@ -67,7 +67,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-
+        playMusic(music.menu);
     }
 
     /*                           */
@@ -123,7 +123,7 @@ public class AudioManager : MonoBehaviour
                 clip = Musics[3];
                 break;
             case music.game1:
-                clip = Musics[4];
+                clip = Musics[0];
                 break;
             case music.game2:
                 fade = true;
