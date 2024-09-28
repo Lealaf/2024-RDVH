@@ -621,6 +621,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f006558ed2de4da438ac2a8356f10de8, type: 3}
+--- !u!1 &1860006253803849504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 299127691750668173, guid: f006558ed2de4da438ac2a8356f10de8, type: 3}
+  m_PrefabInstance: {fileID: 2159096519167062189}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4228531400132930970 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2835126190904057143, guid: f006558ed2de4da438ac2a8356f10de8, type: 3}
@@ -691,6 +696,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1801578184993196269, guid: 9cbdfc304a386eb429dd4799d283d465, type: 3}
+      propertyPath: viewver
+      value: 
+      objectReference: {fileID: 1860006253803849504}
     - target: {fileID: 2599273733983112584, guid: 9cbdfc304a386eb429dd4799d283d465, type: 3}
       propertyPath: m_SizeDelta.x
       value: 240.092
