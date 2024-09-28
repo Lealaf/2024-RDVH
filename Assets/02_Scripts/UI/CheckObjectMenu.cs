@@ -21,7 +21,7 @@ public class CheckObjectMenu : MonoBehaviour
     UnityEvent PutBackEvent;
 
     [SerializeField]
-    UnityEvent<string> ReportEvent;
+    public UnityEvent<string> ReportEvent;
 
     string idObject;
 
@@ -85,6 +85,8 @@ public class CheckObjectMenu : MonoBehaviour
 
     public void Report()
     {
+        OpenCarnet(false);
+        OpenBrochure(false);
         ReportEvent?.Invoke(idObject);
     }
 
