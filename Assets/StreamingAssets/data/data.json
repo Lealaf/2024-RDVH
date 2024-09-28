@@ -45,21 +45,21 @@
         {
             "ID": "OBJECT_7",
             "nom": "Machine à écrire",
-            "description": "<vide>",
+            "description": "La machine à écrire est un appareil mécanographique qui permet de rédiger des documents en imprimant directement des caractères sur du papier. Elle se présente sous la forme d'un clavier avec environ cinquante touches, chacune correspondant à un caractère qui s'imprime lorsqu'on appuie dessus. De nombreux modèles entièrement mécaniques ont vu le jour, avec des formes et des fonctionnements variés. Ces machines ont grandement facilité la production de textes, que ce soit pour un usage personnel ou professionnel.",
             "type": "anachronique",
             "siècle d'invention": "XIXe siècle"
         },
         {
             "ID": "OBJECT_8",
             "nom": "Phonographe",
-            "description": "<vide>",
+            "description": "Cet appareil permet de graver et reproduire du son grâce à un procédé mécanique. En tournant une manivelle, un cylindre recouvert d'une fine feuille d'étain se met à tourner. En parlant dans un tube conique relié à une aiguille, les vibrations de la voix font bouger l'aiguille, qui grave des sillons sur la surface du cylindre. Pour réécouter l'enregistrement, il suffit d'inverser le processus : l'aiguille suit les sillons et reproduit le son d'origine. Si l'enregistrement de la voix humaine est le premier usage, la reproduction musicale viendra plus tard, notamment avec l'enregistrement de concerts.",
             "type": "anachronique",
             "siècle d'invention": "XIXe siècle"
         },
         {
             "ID": "OBJECT_9",
             "nom": "Jouet automate",
-            "description": "<vide>",
+            "description": "Le Canard de Vaucanson est un célèbre automate conçu pour imiter les mouvements et comportements d'un canard vivant. Ce qui le rend particulièrement fascinant, c'est sa capacité à reproduire de manière réaliste des actions comme manger, digérer et même déféquer. Fabriqué en cuivre doré, son corps est partiellement transparent pour permettre aux spectateurs d’observer les rouages internes. L’automate est actionné en tournant une simple clé. Lors de ses démonstrations, il impressionnait aussi bien le grand public que les scientifiques, émerveillés par la précision de son mécanisme et son réalisme.",
             "type": "non anachronique",
             "siècle d'invention": "XVIIIe siècle"
         },
