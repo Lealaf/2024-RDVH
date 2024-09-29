@@ -155,8 +155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bef84a1858ae164281ffee5e101a4c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkObjectMenu: {fileID: 0}
-  interactible: 1
+  interactible: 0
+  objectName: Candle Light
 --- !u!65 &606685730269032975
 BoxCollider:
   m_ObjectHideFlags: 0

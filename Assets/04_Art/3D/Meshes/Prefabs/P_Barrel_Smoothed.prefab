@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactible: 1
+  objectName: Barrel
 --- !u!1001 &1894505227758047666
 PrefabInstance:
   m_ObjectHideFlags: 0

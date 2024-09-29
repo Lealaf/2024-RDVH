@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactible: 0
+  objectName: Candle
 --- !u!1001 &3205796127923913911
 PrefabInstance:
   m_ObjectHideFlags: 0
