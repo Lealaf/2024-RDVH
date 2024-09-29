@@ -12,7 +12,7 @@ public class EventManager : MonoBehaviour
 {
     private static EventManager instance = null;
     public static EventManager Instance => instance;
-    public UnityEvent<GameObject> SelectObject;
+    public UnityEvent<DisplayedObject> SelectObject;
     public UnityEvent<string> CollectObject;
     public UnityEvent CollectedObjectsUpdated;
 

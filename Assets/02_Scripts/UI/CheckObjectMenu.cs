@@ -32,9 +32,9 @@ public class CheckObjectMenu : MonoBehaviour
     }
 
     //TODO passer en parametre la classe avec tt les info pour hydrater tt
-    public void HydrateAndShow(GameObject obj)
+    public void HydrateAndShow(DisplayedObject obj)
     {
-        this.idObject = obj.name;
+        this.idObject = obj.objectName;
         Show(true);
     }
 

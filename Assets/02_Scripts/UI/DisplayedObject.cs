@@ -2,10 +2,13 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+
 public class DisplayedObject : MonoBehaviour
 {
     private List<Material> mats = new List<Material>();
     public bool interactible = false;
+    public string objectName = NOT_DEFINED;
+    const string NOT_DEFINED = "";
     void Start()
     {
         EventManager.Instance.CollectObject.AddListener(HideMeMaybe);
@@ -15,7 +18,7 @@ public class DisplayedObject : MonoBehaviour
     {
         if (!interactible) return;
         ChangeMatToNormal();
-        EventManager.Instance.SelectObject.Invoke(gameObject);
+        EventManager.Instance.SelectObject.Invoke(this);
     }
 
     private void OnMouseOver()
@@ -55,7 +58,9 @@ public class DisplayedObject : MonoBehaviour
 
     public void HideMeMaybe(string id)
     {
-        if (id == name) {
+        Debug.Log(id);
+        Debug.Log(objectName);
+        if (objectName != NOT_DEFINED && id == objectName) {
             gameObject.SetActive(false);
         }
     }

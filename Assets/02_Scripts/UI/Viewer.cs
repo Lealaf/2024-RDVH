@@ -40,8 +40,9 @@ public class Viewer : MonoBehaviour
     }
 
 
-    public void switchObject(GameObject newObject)
+    public void switchObject(DisplayedObject displayeObject)
     {
+        var newObject = displayeObject.gameObject;
 
         gameObjectToRotate.transform.rotation = Quaternion.Euler(0, 0, 0);
         foreach (Transform child in gameObjectToRotate.transform)
