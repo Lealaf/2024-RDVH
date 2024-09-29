@@ -68,8 +68,8 @@ MonoBehaviour:
   m_text: "(Image d'introduction: Gallica.BnF.fr : L'Exposition de Paris (1900),
     Librairie illustr\xE9e Mongr\xE9dien & Cie, Paris, 1898.)"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 53c0ebd6c329af0488d1c42f572fc926, type: 2}
+  m_sharedMaterial: {fileID: -8991275671336483309, guid: 53c0ebd6c329af0488d1c42f572fc926, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
