@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Viewer : MonoBehaviour
 {
@@ -18,7 +20,7 @@ public class Viewer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        EventManager.Instance.SelectObject.AddListener(switchObject);
     }
 
     // Update is called once per frame
@@ -40,6 +42,18 @@ public class Viewer : MonoBehaviour
 
     public void switchObject(GameObject newObject)
     {
+        foreach (Transform child in gameObjectToRotate.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        var newObjectIntance = Instantiate(newObject, gameObjectToRotate.transform);
+        newObjectIntance.transform.localPosition = Vector3.zero;
+        newObjectIntance.layer = 10;
+        foreach (Transform child in newObjectIntance.transform.GetComponentsInChildren<Transform>(true))
+        {
+            child.gameObject.layer = 10;
+        }
+
 
     }
 }

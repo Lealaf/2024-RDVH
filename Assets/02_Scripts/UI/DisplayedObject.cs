@@ -21,6 +21,7 @@ public class ManageObjectClick : MonoBehaviour
     void OnMouseDown()
     {
         if (!interactible) return;
+        ChangeMatToNormal();
         EventManager.Instance.SelectObject.Invoke(gameObject);
     }
 
@@ -35,6 +36,11 @@ public class ManageObjectClick : MonoBehaviour
     private void OnMouseExit()
     {
         if (!interactible) return;
+        ChangeMatToNormal();
+    }
+
+    public void ChangeMatToNormal()
+    {
         foreach (Material mat in mats)
         {
             mat.SetInt("_hover", 0);
