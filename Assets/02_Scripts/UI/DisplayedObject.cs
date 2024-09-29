@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
-public class ManageObjectClick : MonoBehaviour
+public class DisplayedObject : MonoBehaviour
 {
     private List<Material> mats = new List<Material>();
     public bool interactible = false;
