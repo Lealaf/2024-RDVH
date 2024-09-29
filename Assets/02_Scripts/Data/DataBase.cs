@@ -10,6 +10,7 @@ public class DataBase
 {
     public static AllData data;
     public static Dictionary<string, Sprite> sprites;
+    public static Dictionary<string, Sprite> vignettesSprites;
 
     static Sprite LoadSprite(string id)
     {
@@ -25,6 +26,20 @@ public class DataBase
 
         return sprite;
     }
+    static Sprite LoadVignetteSprite(string id)
+    {
+        var filePath = "data/images/vignettes/" + id;
+        var tex = Resources.Load<Texture2D>(filePath);
+        if (tex == null) {
+            Debug.LogError("Can't the vignette image for object which id is " + id + ". The expected resource shloud be\"" + filePath + "\". Use a default one to avoid a crash.");
+            tex = Resources.Load<Texture2D>("data/images/vignettes/not_available");
+        }
+
+        // Creates a new Sprite based on the Texture2D
+        Sprite sprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100.0f);
+
+        return sprite;
+    }
 
     public static void LoadData()
     {
@@ -32,10 +47,13 @@ public class DataBase
 
         // Load and cache all sprites for object images.
         sprites = new Dictionary<string, Sprite>();
+        vignettesSprites = new Dictionary<string, Sprite>();
         foreach (var obj in data.objects)
         {
             Sprite sprite = LoadSprite(obj.ID);
             sprites.Add(obj.ID, sprite);
+            Sprite vignetteSprite = LoadVignetteSprite(obj.ID);
+            vignettesSprites.Add(obj.ID, vignetteSprite);
         }
     }
 }
