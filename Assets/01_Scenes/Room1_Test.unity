@@ -539,6 +539,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4062780927657169822, guid: 7c71d01a830dc8248addc90b214d5225, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4062780927657169822, guid: 7c71d01a830dc8248addc90b214d5225, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6165244672111633792, guid: 7c71d01a830dc8248addc90b214d5225, type: 3}
       propertyPath: volumeSetter
       value: 
@@ -28043,6 +28051,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -197
       objectReference: {fileID: 0}
+    - target: {fileID: 4134730034491884083, guid: b3c6fe061c05d65448ab532f8bacc3e8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MakeButtonNoise
+      objectReference: {fileID: 0}
     - target: {fileID: 4827262910725284698, guid: b3c6fe061c05d65448ab532f8bacc3e8, type: 3}
       propertyPath: m_Name
       value: MenuManager
@@ -28060,6 +28072,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5295598164204283900, guid: b3c6fe061c05d65448ab532f8bacc3e8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1154222817}
+    - target: {fileID: 5295598164204283900, guid: b3c6fe061c05d65448ab532f8bacc3e8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 491700135}
@@ -28068,8 +28084,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5295598164204283900, guid: b3c6fe061c05d65448ab532f8bacc3e8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MakeButtonNoise
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295598164204283900, guid: b3c6fe061c05d65448ab532f8bacc3e8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295598164204283900, guid: b3c6fe061c05d65448ab532f8bacc3e8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ButtonNoise, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5295598164204283900, guid: b3c6fe061c05d65448ab532f8bacc3e8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -28235,11 +28259,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9079979436108210685, guid: b3c6fe061c05d65448ab532f8bacc3e8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MakeButtonNoise
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3c6fe061c05d65448ab532f8bacc3e8, type: 3}
+--- !u!114 &1154222817 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8068361211964365193, guid: b3c6fe061c05d65448ab532f8bacc3e8, type: 3}
+  m_PrefabInstance: {fileID: 1154222816}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b2173ae769f5c042aecc8bf68b6b7e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1164673770 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6841525593827895693, guid: 8be4dcaf6b4245341b59481c573c1ada, type: 3}

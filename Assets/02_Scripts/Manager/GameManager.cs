@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         AudioManager.Instance.PlayMusic(AudioManager.music.game1);
+        AudioManager.Instance.PlayAmbiant(AudioManager.ambiant.inside);
         menuManager.ShowInGameMenu();
     }
 

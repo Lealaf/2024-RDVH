@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 2327265369225540608}
   - component: {fileID: 3895225045953768313}
   - component: {fileID: 2496701394580082388}
+  - component: {fileID: 298149137556009121}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -255,9 +256,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6165244672111633792, guid: 7c71d01a830dc8248addc90b214d5225, type: 3}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: pressButtonNoise
+      - m_Target: {fileID: 298149137556009121}
+        m_TargetAssemblyTypeName: ButtonNoise, Assembly-CSharp
+        m_MethodName: MakeButtonNoise
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -267,3 +268,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &298149137556009121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4277292713620293623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b2173ae769f5c042aecc8bf68b6b7e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -79,6 +79,11 @@ public class AudioManager : MonoBehaviour
             Debug.Log("k1");
             PlayAmbiant(ambiant.outside);
         }
+        if (Input.GetKeyDown(KeyCode.Keypad2))
+        {
+            Debug.Log("k2");
+            pressButtonNoise();
+        }
     }
 
     private void Start()
@@ -130,9 +135,10 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySFXRandomPitch(AudioClip clip, int percentage = 10)
     {
+        Debug.Log("Clip = " + clip);
         float p = percentage / 100f;
         float pitch = Random.Range(1 - p, 1 + p);
-        SFXSource.pitch = pitch;
+        //SFXSource.pitch = pitch;
         SFXSource.PlayOneShot(clip);
     }
 
