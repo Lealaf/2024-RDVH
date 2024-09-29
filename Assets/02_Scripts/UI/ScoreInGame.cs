@@ -8,6 +8,15 @@ public class ScoreInGame : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI score;
 
+    void Start()
+    {
+        EventManager.Instance.CollectedObjectsUpdated.AddListener(UpdateFromState);
+    }
+
+    void UpdateFromState () {
+        Hydrate(GameState.NumberOfCollectedObjects());
+    }
+
     public void Hydrate(int scoreResult)
     {
         score.text = scoreResult.ToString();

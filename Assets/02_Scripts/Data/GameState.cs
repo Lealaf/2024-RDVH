@@ -13,10 +13,17 @@ public class GameState
     public static void Init()
     {
         collected = new HashSet<string>();
+        EventManager.Instance.CollectedObjectsUpdated.Invoke();
     }
 
     public static void CollectObject(string id)
     {
         collected.Add(id);
+        EventManager.Instance.CollectedObjectsUpdated.Invoke();
+    }
+
+    public static int NumberOfCollectedObjects()
+    {
+        return collected.Count;
     }
 }
