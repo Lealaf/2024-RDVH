@@ -69,6 +69,27 @@
             "description": "Le timbre marque l'apparition d'un nouveau système de taxation du courrier, où l'expéditeur paye les frais d'envoi selon une tarification simplifiée. D'abord instauré en Angleterre, ce système s'est rapidement répandu dans les autres pays. Le timbre, généralement de forme rectangulaire avec des dentelures, symbolise l'uniformisation des tarifs postaux sur un territoire. Les timbres sont devenus de véritables objets d'art, ornés de portraits de souverains, de figures allégoriques ou de symboles nationaux, alliant fonctionnalité et esthétique.",
             "type": "anachronique",
             "siècle d'invention": "XIXe siècle"
+        },
+        {
+            "ID": "OBJECT_11",
+            "nom": "Coffre",
+            "description": "Le coffre est un meuble indispensable et multifonctionnel. Il permet de ranger du linge de maison, de la vaisselle ou encore des objets précieux. Il peut faire office d'armoire, de banc ou même de bagage. Utilisé aussi bien par les nobles que par les bourgeois et les gens du peuple, il pouvait être équipé de pieds, de poignées et de serrures, ou non. Avec des poignées, il devenait facilement transportable d’une maison à l’autre. Le coffre était aussi le cadeau de mariage traditionnel, destiné à contenir le trousseau de la mariée.",
+            "type": "non anachronique",
+            "siècle d'invention": ""
+        },
+        {
+            "ID": "OBJECT_12",
+            "nom": "Armoire",
+            "description": "L'armoire est un meuble fermé, généralement peu profond, haut et large, doté d'une ou plusieurs portes fixées par des charnières ou des verrous. Autrefois, elle servait souvent à ranger des armes, des objets de collection ou des curiosités. Sobre et élégante, l'armoire était aussi un symbole de statut social. Les décorations qui l'ornaient étaient souvent sculptées et reprenaient des éléments d'architecture, comme des colonnes et des corniches, ajoutant à son allure imposante et raffinée.",
+            "type": "non anachronique",
+            "siècle d'invention": ""
+        },
+        {
+            "ID": "OBJECT_13",
+            "nom": "Bougeoir",
+            "description": "Un bougeoir est un petit chandelier conçu pour tenir une chandelle ou une bougie. Traditionnellement en métal, son pied prend souvent la forme d'une coupelle ou d'une soucoupe, permettant de récupérer le suif ou la cire fondue. Il est souvent équipé d'une anse, d'une poignée ou d'un anneau, rendant son transport plus facile. L'éclairage à la bougie a été un élément essentiel de la vie quotidienne et faisait partie intégrante de l'aménagement des foyers.",
+            "type": "non anachronique",
+            "siècle d'invention": ""
         }
     ]
 }
