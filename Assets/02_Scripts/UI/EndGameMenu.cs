@@ -10,24 +10,37 @@ public class EndGameMenu : MonoBehaviour
     TextMeshProUGUI score;
 
     [SerializeField]
-    TextMeshProUGUI scoreText;
+    GameObject scoreText;
+
+    [SerializeField]
+    GameObject goodText;
+
+    [SerializeField]
+    GameObject badText;
 
     [SerializeField]
     Transform contentBadItem;
 
     [SerializeField]
-    Image prefabeImageItem;
+    ItemResult prefabeImageItem;
 
     
-    public void Hydrate(string score, string textScore, List<Sprite> listSprite)
+    public void Hydrate(string score, bool goodScore, List<string> listString)
     {
         this.score.text = score;
-        this.scoreText.text = textScore;
+        goodText.SetActive(goodScore);
+        badText.SetActive(!goodScore);
 
-        foreach (Sprite sprite in listSprite)
+
+        //this.scoreText.text = textScore;
+
+        foreach (string id in listString)
         {
-            var item= Instantiate<Image>(prefabeImageItem, contentBadItem);
-            item.sprite = sprite;
+            var item= Instantiate<ItemResult>(prefabeImageItem, contentBadItem);
+
+
+            List<Sprite> sprites = new List<Sprite>();
+            item.Hydrate(id, DataBase.vignettesSprites[id], GameState.IsAnachronic(id));
         }
     }
 }

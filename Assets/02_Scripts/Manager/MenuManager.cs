@@ -42,9 +42,9 @@ public class MenuManager : MonoBehaviour
         inGameMenu.SetActive(false);
     }
 
-    public void ShowEndMenu(string score, string textScore, List<Sprite> listSprite)
+    public void ShowEndMenu(string score, bool goodScore, List<string> listString)
     {
-        endMenu.Hydrate(score, textScore, listSprite);
+        endMenu.Hydrate(score, goodScore, listString);
         endMenu.gameObject.SetActive(true);
         startMenu.SetActive(false);
         pauseMenu.SetActive(false);

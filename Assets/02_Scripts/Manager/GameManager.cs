@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
 
     public void ExitGame()
     {
-        List<Sprite> sprites = new List<Sprite>(); //TODO
-        menuManager.ShowEndMenu(GameState.score.ToString(), GameState.score.ToString(), sprites);
+        List<string> list = new List<string>(GameState.collected);
+        menuManager.ShowEndMenu(GameState.score.ToString(), GameState.score > 3, list);
     }
 }
