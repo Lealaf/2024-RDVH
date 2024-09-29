@@ -43,7 +43,7 @@ public class CheckObjectMenu : MonoBehaviour
     {
         Show(false);
         PutBackEvent?.Invoke();
-
+        AudioManager.Instance.putDownObjectNoise();
     }
 
     public void Report()
@@ -51,6 +51,7 @@ public class CheckObjectMenu : MonoBehaviour
         Show(false);
         GameState.CollectObject(idObject);
         EventManager.Instance.CollectObject.Invoke(idObject);
+        AudioManager.Instance.takeObjectNoise();
     }
 
     public void Show(bool show)
