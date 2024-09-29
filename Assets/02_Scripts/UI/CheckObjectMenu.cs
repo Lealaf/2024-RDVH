@@ -26,6 +26,10 @@ public class CheckObjectMenu : MonoBehaviour
     GameObject viewver;
 
 
+    void Start()
+    {
+        EventManager.Instance.SelectObject.AddListener(HydrateAndShow);
+    }
 
     //TODO passer en parametre la classe avec tt les info pour hydrater tt
     public void HydrateAndShow(string id)
@@ -46,7 +50,6 @@ public class CheckObjectMenu : MonoBehaviour
     {
         Show(false);
         GameState.CollectObject(idObject);
-        ReportEvent?.Invoke(idObject);
         EventManager.Instance.CollectObject.Invoke(idObject);
     }
 

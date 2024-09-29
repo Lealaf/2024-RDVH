@@ -4,9 +4,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 public class ManageObjectClick : MonoBehaviour
 {
-    [SerializeField]
-    public CheckObjectMenu checkObjectMenu;
-
     private List<Material> mats = new List<Material>();
     public bool interactible = false;
     void Start()
@@ -24,7 +21,7 @@ public class ManageObjectClick : MonoBehaviour
     void OnMouseDown()
     {
         if (!interactible) return;
-        checkObjectMenu.HydrateAndShow(name);
+        EventManager.Instance.SelectObject.Invoke(name);
     }
 
     private void OnMouseOver()

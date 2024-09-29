@@ -12,6 +12,7 @@ public class EventManager : MonoBehaviour
 {
     private static EventManager instance = null;
     public static EventManager Instance => instance;
+    public UnityEvent<string> SelectObject;
     public UnityEvent<string> CollectObject;
 
     private void Awake()
