@@ -21,6 +21,13 @@ public class GameState
         }
     }
 
+    public static void Reset()
+    {
+        collected.Clear();
+        ComputeScore();
+        EventManager.Instance.CollectedObjectsUpdated.Invoke();
+    }
+
     public static void CollectObject(string id)
     {
         collected.Add(id);

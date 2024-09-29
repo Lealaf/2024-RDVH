@@ -28,9 +28,14 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        menuManager.ShowStartMenu();
         DataBase.LoadData();
         GameState.Init();
+        menuManager.ShowStartMenu();
+    }
+
+    public void ResetGame()
+    {
+        GameState.Reset();
     }
 
     // Update is called once per frame
