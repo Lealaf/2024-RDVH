@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Les Chroniques d\u2019Anna"
+  m_text: "Les Chroniques d\u2019Ana"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 74310fc17af530f4c902e84ddbf2f5d1, type: 2}
   m_sharedMaterial: {fileID: -4850317399920771257, guid: 74310fc17af530f4c902e84ddbf2f5d1, type: 2}
@@ -280,10 +280,10 @@ MonoBehaviour:
     une\_ maison d\u2019\xE9poque et d\xE9couvrez la vie quotidienne sous l\u2019Ancien
     R\xE9gime. Cette reconstitution est une mise en sc\xE8ne, fruit de l\u2019imagination
     d\u2019entrepreneurs du XIXe si\xE8cle, refl\xE9tant leur vision du pass\xE9
-    \xE0 travers les connaissances de leur \xE9poque.\nIncarnez Anna, une historienne
+    \xE0 travers les connaissances de leur \xE9poque.\nIncarnez Ana, une historienne
     du XIXe si\xE8cle, qui partage son savoir avec le grand public \xE0 travers la
-    publication de carnets d\u2019anachronisme. Anna n\u2019a pas pu int\xE9grer
-    le comit\xE9 d\u2019organisation du \u2018Vieux Paris\u2019, car les entrepreneurs
+    publication de carnets d\u2019anachronisme. Ana n\u2019a pas pu int\xE9grer le
+    comit\xE9 d\u2019organisation du \u2018Vieux Paris\u2019, car les entrepreneurs
     ont privil\xE9gi\xE9 le divertissement \xE0 l\u2019exactitude historique. Elle
     est donc d\xE9termin\xE9e \xE0 d\xE9masquer les anachronismes dissimul\xE9s dans
     les d\xE9cors de l\u2019attraction.\nVotre mission : rep\xE9rer les objets anachroniques
