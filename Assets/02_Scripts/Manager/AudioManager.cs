@@ -72,17 +72,7 @@ public class AudioManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Keypad0))
         {
             Debug.Log("k0");
-            PlayAmbiant(ambiant.inside);
-        }
-        if (Input.GetKeyDown(KeyCode.Keypad1))
-        {
-            Debug.Log("k1");
-            PlayAmbiant(ambiant.outside);
-        }
-        if (Input.GetKeyDown(KeyCode.Keypad2))
-        {
-            Debug.Log("k2");
-            pressButtonNoise();
+            PlayMusic(music.game2);
         }
     }
 
@@ -150,6 +140,15 @@ public class AudioManager : MonoBehaviour
     public void pressButtonNoise()
     {
         PlaySFXRandomPitch(menuSFXs[0]);
+    }
+    public void turnPageNoise()
+    {
+        PlaySFXRandomPitch(menuSFXs[1]);
+    }
+
+    public void closeBookNoise()
+    {
+        PlaySFXRandomPitch(menuSFXs[2]);
     }
 
     /*                                 */

@@ -33,7 +33,6 @@ public class InGameMenuManager : MonoBehaviour
     void Start()
     {
         CloseAll();
-        
     }
 
     public void OpenCarnet(bool open)
