@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance => instance;
 
     public AudioMixer mixer;
-    private AudioManagerVolumeSetter volumeSetter = null;
+    public AudioManagerVolumeSetter volumeSetter;
 
     public AudioSource SFXSource;
     public AudioSource ambiant1;
@@ -27,7 +27,6 @@ public class AudioManager : MonoBehaviour
 
     // Ajouter des sons pour les menus par exemple?
     [SerializeField] private AudioClip[] menuSFXs;
-
 
     [SerializeField] private AudioClip[] AmbiantsList;
 
@@ -71,7 +70,7 @@ public class AudioManager : MonoBehaviour
         /* Utilisation des input direct pour tester. */
         if(Input.GetKeyDown(KeyCode.Keypad0))
         {
-            Debug.Log("k0");
+            Debug.Log("Musique secrète!");
             PlayMusic(music.game2);
         }
     }
