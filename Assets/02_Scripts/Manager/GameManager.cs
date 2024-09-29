@@ -28,9 +28,18 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        menuManager.ShowStartMenu();
         DataBase.LoadData();
         GameState.Init();
+        if (menuManager == null)
+        {
+            menuManager = GameObject.FindGameObjectsWithTag("MenuManager")[0].GetComponentInChildren<MenuManager>();
+        }
+        menuManager.ShowStartMenu();
+    }
+
+    public void ResetGame()
+    {
+        GameState.Reset();
     }
 
     // Update is called once per frame
@@ -48,7 +57,7 @@ public class GameManager : MonoBehaviour
 
     public void ExitGame()
     {
-        List<Sprite> sprites = new List<Sprite>(); //TODO
-        menuManager.ShowEndMenu(GameState.score.ToString(), GameState.score.ToString(), sprites);
+        List<string> list = new List<string>(GameState.collected);
+        menuManager.ShowEndMenu(GameState.score.ToString(), GameState.score > 3, list);
     }
 }

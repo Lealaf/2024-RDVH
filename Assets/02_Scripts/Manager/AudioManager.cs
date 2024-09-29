@@ -28,7 +28,6 @@ public class AudioManager : MonoBehaviour
     // Ajouter des sons pour les menus par exemple?
     [SerializeField] private AudioClip[] menuSFXs;
 
-
     [SerializeField] private AudioClip[] AmbiantsList;
 
     public enum music
@@ -71,7 +70,7 @@ public class AudioManager : MonoBehaviour
         /* Utilisation des input direct pour tester. */
         if(Input.GetKeyDown(KeyCode.Keypad0))
         {
-            Debug.Log("k0");
+            Debug.Log("Musique secrète!");
             PlayMusic(music.game2);
         }
     }

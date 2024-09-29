@@ -15,6 +15,11 @@ public class GameFonction : MonoBehaviour
         GameManager.Instance.StartGame();
     }
 
+    public void ResetGame()
+    {
+        GameManager.Instance.ResetGame();
+    }
+
     public void QuitApplication()
     {
         Application.Quit();
