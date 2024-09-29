@@ -68,8 +68,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bef84a1858ae164281ffee5e101a4c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkObjectMenu: {fileID: 0}
   interactible: 1
+  objectName: OBJECT_4
 --- !u!1 &5736400975714378263
 GameObject:
   m_ObjectHideFlags: 0

@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactible: 1
+  objectName: OBJECT_7
 --- !u!65 &4264323831049043973
 BoxCollider:
   m_ObjectHideFlags: 0

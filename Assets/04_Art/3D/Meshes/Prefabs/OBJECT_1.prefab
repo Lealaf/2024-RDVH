@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactible: 1
+  objectName: OBJECT_1
 --- !u!64 &-3060214341235870212
 MeshCollider:
   m_ObjectHideFlags: 0

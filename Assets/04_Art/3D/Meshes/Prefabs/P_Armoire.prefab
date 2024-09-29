@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactible: 1
+  objectName: OBJECT_12
 --- !u!1001 &5195508148720062952
 PrefabInstance:
   m_ObjectHideFlags: 0

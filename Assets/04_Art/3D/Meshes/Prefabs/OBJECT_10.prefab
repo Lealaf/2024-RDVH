@@ -321,6 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactible: 1
+  objectName: OBJECT_10
 --- !u!1 &5143460328130956172
 GameObject:
   m_ObjectHideFlags: 0
