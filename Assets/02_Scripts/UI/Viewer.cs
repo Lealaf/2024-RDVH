@@ -42,6 +42,8 @@ public class Viewer : MonoBehaviour
 
     public void switchObject(GameObject newObject)
     {
+
+        gameObjectToRotate.transform.rotation = Quaternion.Euler(0, 0, 0);
         foreach (Transform child in gameObjectToRotate.transform)
         {
             Destroy(child.gameObject);
