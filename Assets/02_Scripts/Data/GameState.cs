@@ -9,7 +9,10 @@ using UnityEngine;
 public class GameState
 {
     public static HashSet<string> collected;
-
+    public static int score = 0;
+    public static int nAnachronic = 0;
+    public static int nNonAnachronic = 0;
+    
     public static void Init()
     {
         if (collected == null) {
@@ -21,6 +24,7 @@ public class GameState
     public static void CollectObject(string id)
     {
         collected.Add(id);
+        ComputeScore();
         EventManager.Instance.CollectedObjectsUpdated.Invoke();
     }
 
@@ -33,41 +37,35 @@ public class GameState
     {
         Debug.Log(id);
         if (DataBase.data.objects.Exists(o => o.ID == id)) {
-            Debug.Log("found");
             var obj = DataBase.data.objects.Find(o => o.ID == id);
-            Debug.Log(obj.type);
             if (obj.type == "anachronique") {
                 return true;
             } else {
                 return false;
             }
         } else {
-            Debug.Log("not found");
             return false;
         }
 
     }
 
-    public static int GetScore()
+    public static void ComputeScore()
     {
         if (collected == null) {
-            return 0;
+            score = 0;
         }
         var all = 0;
-        var good = 0;
-        var bad = 0;
+        nAnachronic = 0;
+        nNonAnachronic = 0;
         foreach(var id in collected)
         {
             all++;
             if (IsAnachronic(id))
-                good++;
+                nAnachronic++;
             else
-                bad++;
+                nNonAnachronic++;
         }
-        Debug.Log("all = " + all);
-        Debug.Log("good = " + good);
-        Debug.Log("bad = " + bad);
 
-        return good - bad;
+        score = nAnachronic - nNonAnachronic;
     }
 }
