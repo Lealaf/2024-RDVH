@@ -46,7 +46,14 @@ public class Viewer : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+        
+
         var newObjectIntance = Instantiate(newObject, gameObjectToRotate.transform);
+        var displayObject = newObjectIntance.GetComponent<DisplayedObject>();
+        if (displayObject != null)
+        {
+            displayObject.ChangeMatToNormal();
+        }
         newObjectIntance.transform.localPosition = Vector3.zero;
         newObjectIntance.layer = 10;
         foreach (Transform child in newObjectIntance.transform.GetComponentsInChildren<Transform>(true))
