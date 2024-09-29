@@ -67,8 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bef84a1858ae164281ffee5e101a4c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkObjectMenu: {fileID: 0}
-  interactible: 0
+  interactible: 1
 --- !u!1001 &5195508148720062952
 PrefabInstance:
   m_ObjectHideFlags: 0
