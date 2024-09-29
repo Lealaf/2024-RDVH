@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6687293623112494558}
   - component: {fileID: 3011724790615045694}
+  - component: {fileID: -3060214341235870212}
   m_Layer: 0
-  m_Name: P_Presse
+  m_Name: OBJECT_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,6 +47,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkObjectMenu: {fileID: 0}
+  interactible: 1
+--- !u!64 &-3060214341235870212
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3780564837860131350}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2477511411847689622, guid: 7202d367857b9c043a141472f8d81b13, type: 3}
 --- !u!1001 &923179031726281940
 PrefabInstance:
   m_ObjectHideFlags: 0
