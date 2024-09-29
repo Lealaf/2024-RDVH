@@ -33,6 +33,7 @@ public class InGameMenuManager : MonoBehaviour
     void Start()
     {
         CloseAll();
+        
     }
 
     public void OpenCarnet(bool open)
@@ -40,6 +41,10 @@ public class InGameMenuManager : MonoBehaviour
         if (open)
         {
             carnet.Open();
+        }
+        else
+        {
+            AudioManager.Instance.closeBookNoise();
         }
         carnet.gameObject.SetActive(open);
         menuCarnet.SetActive(!open);

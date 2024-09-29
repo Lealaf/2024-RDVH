@@ -14,12 +14,12 @@ public class MenuManager : MonoBehaviour
     GameObject pauseMenu;
 
     [SerializeField]
-    GameObject endMenu;
+    EndGameMenu endMenu;
 
 
     public void ShowInGameMenu()
     {
-        endMenu.SetActive(false);
+        endMenu.gameObject.SetActive(false);
         startMenu.SetActive(false);
         pauseMenu.SetActive(false);
         inGameMenu.SetActive(true);
@@ -27,7 +27,7 @@ public class MenuManager : MonoBehaviour
 
     public void ShowPauseMenu() 
     {
-        endMenu.SetActive(false);
+        endMenu.gameObject.SetActive(false);
         startMenu.SetActive(false);
         pauseMenu.SetActive(true);
         inGameMenu.SetActive(false);
@@ -36,15 +36,16 @@ public class MenuManager : MonoBehaviour
 
     public void ShowStartMenu()
     {
-        endMenu.SetActive(false);
+        endMenu.gameObject.SetActive(false);
         startMenu.SetActive(true);
         pauseMenu.SetActive(false);
         inGameMenu.SetActive(false);
     }
 
-    public void ShowEndMenu()
+    public void ShowEndMenu(string score, string textScore, List<Sprite> listSprite)
     {
-        endMenu.SetActive(true);
+        endMenu.Hydrate(score, textScore, listSprite);
+        endMenu.gameObject.SetActive(true);
         startMenu.SetActive(false);
         pauseMenu.SetActive(false);
         inGameMenu.SetActive(false);

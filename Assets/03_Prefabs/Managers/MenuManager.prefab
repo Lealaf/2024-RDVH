@@ -226,7 +226,7 @@ MonoBehaviour:
   startMenu: {fileID: 4112258418552908233}
   inGameMenu: {fileID: 6947477532295685095}
   pauseMenu: {fileID: 6711753911828606541}
-  endMenu: {fileID: 7643826092692085498}
+  endMenu: {fileID: 4474492759587958537}
 --- !u!1 &6711753911828606541
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,11 +761,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2004f87dc33362249b7798857305e40d, type: 3}
---- !u!1 &7643826092692085498 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6112790676179055289, guid: 2004f87dc33362249b7798857305e40d, type: 3}
+--- !u!114 &4474492759587958537 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 60863035475150666, guid: 2004f87dc33362249b7798857305e40d, type: 3}
   m_PrefabInstance: {fileID: 4521805265812514883}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8f905f90fe9f7f4584fa45033236adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &8684402832488556430 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5063628950297546701, guid: 2004f87dc33362249b7798857305e40d, type: 3}
@@ -1384,7 +1390,7 @@ PrefabInstance:
     - target: {fileID: 1415226151101819420, guid: f4661777bf982d34c986adac544e3308, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 6003510890536769419}
+      objectReference: {fileID: 0}
     - target: {fileID: 1415226151101819420, guid: f4661777bf982d34c986adac544e3308, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -1737,17 +1743,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6051339059142446722, guid: f4661777bf982d34c986adac544e3308, type: 3}
   m_PrefabInstance: {fileID: 7704253711103911755}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6003510890536769419 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4160130571918864576, guid: f4661777bf982d34c986adac544e3308, type: 3}
-  m_PrefabInstance: {fileID: 7704253711103911755}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4112258418552908233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7001e69bf26ab874ebcee0182dfc8496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6379274720988274568 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3633487224646400195, guid: f4661777bf982d34c986adac544e3308, type: 3}
