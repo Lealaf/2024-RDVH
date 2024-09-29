@@ -48,15 +48,15 @@ public class Viewer : MonoBehaviour
         }
         
 
-        var newObjectIntance = Instantiate(newObject, gameObjectToRotate.transform);
-        var displayObject = newObjectIntance.GetComponent<DisplayedObject>();
+        var newObjectInstance = Instantiate(newObject, gameObjectToRotate.transform);
+        var displayObject = newObjectInstance.GetComponent<DisplayedObject>();
         if (displayObject != null)
         {
             displayObject.ChangeMatToNormal();
         }
-        newObjectIntance.transform.localPosition = Vector3.zero;
-        newObjectIntance.layer = 10;
-        foreach (Transform child in newObjectIntance.transform.GetComponentsInChildren<Transform>(true))
+        newObjectInstance.transform.localPosition = Vector3.zero;
+        newObjectInstance.layer = 10;
+        foreach (Transform child in newObjectInstance.transform.GetComponentsInChildren<Transform>(true))
         {
             child.gameObject.layer = 10;
         }

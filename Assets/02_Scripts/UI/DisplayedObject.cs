@@ -9,14 +9,7 @@ public class DisplayedObject : MonoBehaviour
     void Start()
     {
         EventManager.Instance.CollectObject.AddListener(HideMeMaybe);
-        MeshRenderer[] meshRenderers = gameObject.GetComponentsInChildren<MeshRenderer>();
-        foreach (MeshRenderer meshRenderer in meshRenderers)
-        {
-            foreach (Material mat in meshRenderer.materials)
-            {
-                mats.Add(mat);
-            }
-        }
+        getMats();
     }
     void OnMouseDown()
     {
@@ -39,8 +32,21 @@ public class DisplayedObject : MonoBehaviour
         ChangeMatToNormal();
     }
 
+    public void getMats()
+    {
+        MeshRenderer[] meshRenderers = gameObject.GetComponentsInChildren<MeshRenderer>();
+        foreach (MeshRenderer meshRenderer in meshRenderers)
+        {
+            foreach (Material mat in meshRenderer.materials)
+            {
+                mats.Add(mat);
+            }
+        }
+    }
+
     public void ChangeMatToNormal()
     {
+        if(mats.Count == 0) getMats();
         foreach (Material mat in mats)
         {
             mat.SetInt("_hover", 0);
