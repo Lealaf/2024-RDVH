@@ -31,6 +31,10 @@ public class GameManager : MonoBehaviour
         DataBase.LoadData();
         GameState.Init();
         menuManager.ShowStartMenu();
+        if (menuManager == null)
+        {
+            menuManager = GameObject.FindGameObjectsWithTag("MenuManager")[0].GetComponentInChildren<MenuManager>();
+        }
     }
 
     public void ResetGame()

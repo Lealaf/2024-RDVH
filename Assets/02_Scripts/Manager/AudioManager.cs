@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance => instance;
 
     public AudioMixer mixer;
-    public AudioManagerVolumeSetter volumeSetter;
+    private AudioManagerVolumeSetter volumeSetter = null;
 
     public AudioSource SFXSource;
     public AudioSource ambiant1;
