@@ -47,6 +47,7 @@ public class CheckObjectMenu : MonoBehaviour
         Show(false);
         GameState.CollectObject(idObject);
         ReportEvent?.Invoke(idObject);
+        EventManager.Instance.CollectObject.Invoke(idObject);
     }
 
     public void Show(bool show)

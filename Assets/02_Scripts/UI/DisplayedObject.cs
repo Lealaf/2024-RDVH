@@ -11,7 +11,7 @@ public class ManageObjectClick : MonoBehaviour
     public bool interactible = false;
     void Start()
     {
-        checkObjectMenu.ReportEvent.AddListener(HideMeMaybe);
+        EventManager.Instance.CollectObject.AddListener(HideMeMaybe);
         MeshRenderer[] meshRenderers = gameObject.GetComponentsInChildren<MeshRenderer>();
         foreach (MeshRenderer meshRenderer in meshRenderers)
         {
