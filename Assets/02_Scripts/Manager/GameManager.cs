@@ -4,9 +4,28 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private static GameManager instance = null;
+    public static GameManager Instance => instance;
+
     [SerializeField]
     MenuManager menuManager;
-    // Start is called before the first frame update
+
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+
+
+
     void Start()
     {
         menuManager.ShowStartMenu();
@@ -29,6 +48,6 @@ public class GameManager : MonoBehaviour
 
     public void ExitGame()
     {
-
+        menuManager.ShowEndMenu();
     }
 }

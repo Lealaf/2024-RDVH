@@ -13,9 +13,13 @@ public class MenuManager : MonoBehaviour
     [SerializeField]
     GameObject pauseMenu;
 
+    [SerializeField]
+    GameObject endMenu;
+
 
     public void ShowInGameMenu()
     {
+        endMenu.SetActive(false);
         startMenu.SetActive(false);
         pauseMenu.SetActive(false);
         inGameMenu.SetActive(true);
@@ -23,6 +27,7 @@ public class MenuManager : MonoBehaviour
 
     public void ShowPauseMenu() 
     {
+        endMenu.SetActive(false);
         startMenu.SetActive(false);
         pauseMenu.SetActive(true);
         inGameMenu.SetActive(false);
@@ -31,7 +36,16 @@ public class MenuManager : MonoBehaviour
 
     public void ShowStartMenu()
     {
+        endMenu.SetActive(false);
         startMenu.SetActive(true);
+        pauseMenu.SetActive(false);
+        inGameMenu.SetActive(false);
+    }
+
+    public void ShowEndMenu()
+    {
+        endMenu.SetActive(true);
+        startMenu.SetActive(false);
         pauseMenu.SetActive(false);
         inGameMenu.SetActive(false);
     }
