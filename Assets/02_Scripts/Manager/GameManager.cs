@@ -30,11 +30,11 @@ public class GameManager : MonoBehaviour
     {
         DataBase.LoadData();
         GameState.Init();
-        menuManager.ShowStartMenu();
         if (menuManager == null)
         {
             menuManager = GameObject.FindGameObjectsWithTag("MenuManager")[0].GetComponentInChildren<MenuManager>();
         }
+        menuManager.ShowStartMenu();
     }
 
     public void ResetGame()
