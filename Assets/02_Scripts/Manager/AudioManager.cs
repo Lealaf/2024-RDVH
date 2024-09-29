@@ -16,15 +16,20 @@ public class AudioManager : MonoBehaviour
     public AudioManagerVolumeSetter volumeSetter;
 
     public AudioSource SFXSource;
-    public AudioSource music1;
-    public AudioSource music2;
+    public AudioSource ambiant1;
+    public AudioSource ambiant2;
+    public AudioSource musicSource;
 
     // Liste des musiques dispo
     [SerializeField] private AudioClip[] Musics;
-    private bool music1IsPlaying = false;
+    private bool ambiant1IsPlaying = false;
+    private bool ambiantIsPlaying = false;
 
     // Ajouter des sons pour les menus par exemple?
     [SerializeField] private AudioClip[] menuSFXs;
+
+
+    [SerializeField] private AudioClip[] AmbiantsList;
 
     public enum music
     {
@@ -39,6 +44,11 @@ public class AudioManager : MonoBehaviour
     {
         button,
         other
+    }
+    public enum ambiant
+    {
+        inside,
+        outside
     }
 
     private void Awake()
@@ -58,23 +68,65 @@ public class AudioManager : MonoBehaviour
 
     void Update()
     {
-        /* Utilisation des input direct pour tester. *//*
+        /* Utilisation des input direct pour tester. */
         if(Input.GetKeyDown(KeyCode.Keypad0))
         {
-
+            Debug.Log("k0");
+            PlayAmbiant(ambiant.inside);
         }
-        */
+        if (Input.GetKeyDown(KeyCode.Keypad1))
+        {
+            Debug.Log("k1");
+            PlayAmbiant(ambiant.outside);
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad2))
+        {
+            Debug.Log("k2");
+            pressButtonNoise();
+        }
     }
 
     private void Start()
     {
         volumeSetter.setLevels();
-        playMusic(music.menu);
+        PlayMusic(music.menu);
     }
 
     /*                           */
     /*      Gestion des SFX      */
     /*                           */
+
+    public void PlayAmbiant(ambiant amb)
+    {
+        AudioClip clip = AmbiantsList[0];
+        if(amb == ambiant.outside)
+        {
+            clip = AmbiantsList[1];
+        }
+        if (ambiantIsPlaying)
+        {
+            FadeAmbiant(clip);
+        }
+        else
+        {
+            PlayAmbiant(clip);
+            ambiantIsPlaying = true;
+        }
+    }
+
+    public void StopAmbiant()
+    {
+        if (!ambiantIsPlaying) return;
+        if (ambiant1IsPlaying)
+        {
+            ambiant1.Stop();
+        }
+        else
+        {
+            ambiant2.Stop();
+        }
+        ambiantIsPlaying = false;
+    }
 
     public void PlaySFX(AudioClip clip)
     {
@@ -83,9 +135,10 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySFXRandomPitch(AudioClip clip, int percentage = 10)
     {
+        Debug.Log("Clip = " + clip);
         float p = percentage / 100f;
         float pitch = Random.Range(1 - p, 1 + p);
-        SFXSource.pitch = pitch;
+        //SFXSource.pitch = pitch;
         SFXSource.PlayOneShot(clip);
     }
 
@@ -105,10 +158,8 @@ public class AudioManager : MonoBehaviour
 
 
     // Play a single clip through the music source.
-    public void playMusic(music music)
+    public void PlayMusic(music music)
     {
-        Debug.Log("play Music (music)");
-        bool fade = false;
         AudioClip clip;
         switch (music)
         {
@@ -116,106 +167,105 @@ public class AudioManager : MonoBehaviour
                 clip = Musics[0];
                 break;
             case music.loss:
-                clip = Musics[1];
+                clip = Musics[3];
                 break;
             case music.win:
-                clip = Musics[2];
+                clip = Musics[4];
                 break;
             case music.pause:
-                clip = Musics[3];
+                clip = Musics[0];
                 break;
             case music.game1:
                 clip = Musics[1];
                 break;
             case music.game2:
-                fade = true;
-                clip = Musics[4];
+                clip = Musics[2];
                 break;
             default: clip = null;
                 break;
         }
-        if (fade)
+        PlayMusic(clip);
+    }
+
+    public void PlayMusic(AudioClip clip)
+    {
+        musicSource.clip = clip;
+        musicSource.Play();
+    }
+
+    public void PlayAmbiant(AudioClip clip)
+    {
+        Debug.Log("play ambiant");
+        //Debug.Log("play Music (clip)");
+        if (ambiant1IsPlaying)
         {
-            fadeMusic(clip);
+            ambiant1.clip = clip;
+            ambiant1.Play();
         }
         else
         {
-            playMusic(clip);
+            ambiant2.clip = clip;
+            ambiant2.Play();
         }
     }
 
-
-    public void playMusic(AudioClip clip)
+    public void FadeAmbiant(AudioClip clip, float fadeTime = 1.0f)
     {
-        Debug.Log("play Music (clip)");
-        if (music1IsPlaying)
-        {
-            music1.clip = clip;
-            music1.Play();
-        }
-        else
-        {
-            music2.clip = clip;
-            music2.Play();
-        }
-    }
-
-    public void fadeMusic(AudioClip clip, float fadeTime = 1.0f)
-    {
-        Debug.Log("fade music");
+        Debug.Log("fade ambiant");
+        //Debug.Log("fade music");
         float musicTime = 0;
-        if (music1IsPlaying)
+        if (ambiant1IsPlaying)
         {
-            Debug.Log("music 1 playing");
-            if (music1.clip.length > clip.length)
+            //Debug.Log("music 1 playing");
+            if (ambiant1.clip.length > clip.length)
             {
-                musicTime = music1.time % clip.length;
+                musicTime = ambiant1.time % clip.length;
             }
             else
             {
-                musicTime = music1.time;
+                musicTime = ambiant1.time;
             }
-            music2.clip = clip;
-            music2.time = musicTime;
+            ambiant2.clip = clip;
+            ambiant2.time = musicTime;
 
             StartCoroutine(FadeMixerGroup.StartFade(mixer, "Music1Volume", fadeTime, 0.0f));
             StartCoroutine(FadeMixerGroup.StartFade(mixer, "Music2Volume", fadeTime, 1.0f));
 
-            Invoke("stopM1", fadeTime);
-            music2.Play();
-            music1IsPlaying = false;
+            Invoke("StopA1", fadeTime);
+            ambiant2.Play();
+            ambiant1IsPlaying = false;
         }
         else
         {
             Debug.Log("music 2 playing");
-            if (music2.clip.length > clip.length)
+            if (ambiant2.clip.length > clip.length)
             {
-                musicTime = music2.time % clip.length;
+                musicTime = ambiant2.time % clip.length;
             }
             else
             {
-                musicTime = music2.time;
+                musicTime = ambiant2.time;
             }
-            music1.clip = clip;
-            music1.time = musicTime;
+            ambiant1.clip = clip;
+            ambiant1.time = musicTime;
 
             StartCoroutine(FadeMixerGroup.StartFade(mixer, "Music1Volume", fadeTime, 1.0f));
             StartCoroutine(FadeMixerGroup.StartFade(mixer, "Music2Volume", fadeTime, 0.0f));
 
-            Invoke("stopM2", fadeTime);
-            music1.Play();
-            music1IsPlaying = true;
+            Invoke("StopA2", fadeTime);
+            ambiant1.Play();
+            ambiant1IsPlaying = true;
         }
     }
 
 
-    void stopM1()
+    void StopA1()
     {
-        music1.Stop();
+        ambiant1.Stop();
     }
-    void stopM2()
+    void StopA2()
     {
-        music2.Stop();
+        ambiant2.Stop();
     }
 }
 
