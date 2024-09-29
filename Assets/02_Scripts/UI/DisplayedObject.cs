@@ -58,8 +58,7 @@ public class DisplayedObject : MonoBehaviour
 
     public void HideMeMaybe(string id)
     {
-        Debug.Log(id);
-        Debug.Log(objectName);
+        if (!interactible) return;
         if (objectName != NOT_DEFINED && id == objectName) {
             gameObject.SetActive(false);
         }
