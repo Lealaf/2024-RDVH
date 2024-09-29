@@ -11,6 +11,7 @@ public class ScoreInGame : MonoBehaviour
     void Start()
     {
         EventManager.Instance.CollectedObjectsUpdated.AddListener(UpdateFromState);
+        UpdateFromState();
     }
 
     void UpdateFromState () {

@@ -24,6 +24,6 @@ public class GameState
 
     public static int NumberOfCollectedObjects()
     {
-        return collected.Count;
+        return collected == null ? 0 : collected.Count;
     }
 }
