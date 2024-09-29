@@ -46,7 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bef84a1858ae164281ffee5e101a4c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkObjectMenu: {fileID: 0}
   interactible: 1
 --- !u!64 &-3060214341235870212
 MeshCollider:
@@ -69,7 +68,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -2477511411847689622, guid: 7202d367857b9c043a141472f8d81b13, type: 3}
+  m_Mesh: {fileID: 4493585093827132993, guid: 7202d367857b9c043a141472f8d81b13, type: 3}
 --- !u!1001 &923179031726281940
 PrefabInstance:
   m_ObjectHideFlags: 0

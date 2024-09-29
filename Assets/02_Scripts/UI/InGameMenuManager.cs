@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static AudioManager;
 
 public class InGameMenuManager : MonoBehaviour
 {
@@ -61,6 +62,8 @@ public class InGameMenuManager : MonoBehaviour
 
     public void QuitGame()
     {
+        AudioManager.Instance.PlayMusic(music.menu);
+        AudioManager.Instance.StopAmbiant();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
