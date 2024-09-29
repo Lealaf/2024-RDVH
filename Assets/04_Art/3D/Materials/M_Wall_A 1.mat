@@ -75,6 +75,6 @@ Material:
     - _VP_Contrast: 1
     m_Colors:
     - _BaseColor_B: {r: 0.5377358, g: 0.5146256, b: 0.43373975, a: 0}
-    - _BaseColor_B_1: {r: 0.509434, g: 0.30925018, b: 0.1321645, a: 0}
+    - _BaseColor_B_1: {r: 0.46226418, g: 0.38001877, b: 0.30744928, a: 0}
     - _Noise_color: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []

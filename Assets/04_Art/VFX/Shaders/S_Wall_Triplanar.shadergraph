@@ -491,13 +491,13 @@
                 "m_Node": {
                     "m_Id": "531c1337f2e2428eb6823dd6825777ed"
                 },
-                "m_SlotId": 2
+                "m_SlotId": 1
             },
             "m_InputSlot": {
                 "m_Node": {
                     "m_Id": "353bafd9ff4444ab84d0c9406ac99491"
                 },
-                "m_SlotId": 1
+                "m_SlotId": 2
             }
         },
         {
@@ -505,13 +505,13 @@
                 "m_Node": {
                     "m_Id": "531c1337f2e2428eb6823dd6825777ed"
                 },
-                "m_SlotId": 3
+                "m_SlotId": 2
             },
             "m_InputSlot": {
                 "m_Node": {
                     "m_Id": "353bafd9ff4444ab84d0c9406ac99491"
                 },
-                "m_SlotId": 2
+                "m_SlotId": 1
             }
         },
         {
