@@ -70,6 +70,7 @@ Material:
     - _Smoothness: 0.5
     - _Smoothness_A: 0.5
     - _Smoothness_B: 0
+    - _TriplanarSwitch: 1
     - _UseTriplanarNoise: 1
     - _VP_Contrast: 1
     m_Colors:
