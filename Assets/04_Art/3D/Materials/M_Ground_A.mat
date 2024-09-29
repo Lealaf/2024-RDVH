@@ -37,11 +37,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MatA_TextureBC:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 5ea38e97fb4016047ba1e1d91a278109, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MatB_TextureBC:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mat_A_TextureSmoothness:
+        m_Texture: {fileID: 2800000, guid: 373bb417cb58c8f48b1aed7f93c2f251, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_ee1e91fa9bb6446abde5736c65f59b23_Texture_1_Texture2D:
@@ -57,11 +61,12 @@ Material:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _Blend_Opacity: 0
-    - _Mat_A_Uses_Texture: 0
+    - _MatA_TilingTexture: 3.5
+    - _Mat_A_Uses_Texture: 1
     - _Mat_B_Uses_texture: 0
     - _Metallic: 0
-    - _NoiseOpacity: 0.12
-    - _NoiseTiling: -0.2
+    - _NoiseOpacity: 0.06
+    - _NoiseTiling: 0.04
     - _Smoothness: 0.5
     - _Smoothness_A: 0.5
     - _Smoothness_B: 0
@@ -69,6 +74,6 @@ Material:
     - _VP_Contrast: 1
     m_Colors:
     - _BaseColor_B: {r: 0.46226418, g: 0.43760785, b: 0.3554201, a: 0}
-    - _BaseColor_B_1: {r: 0.4245283, g: 0.32278264, b: 0.23028658, a: 0}
-    - _Noise_color: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 0}
+    - _BaseColor_B_1: {r: 0.509434, g: 0.30925018, b: 0.1321645, a: 0}
+    - _Noise_color: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
