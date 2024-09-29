@@ -43,4 +43,10 @@ public class EndGameMenu : MonoBehaviour
             item.Hydrate(id, DataBase.vignettesSprites[id], GameState.IsAnachronic(id));
         }
     }
+    public void Replay()
+    {
+        // AudioManager.Instance.PlayMusic(music.menu);
+        // AudioManager.Instance.StopAmbiant();
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
