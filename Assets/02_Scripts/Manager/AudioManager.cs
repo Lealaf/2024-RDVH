@@ -141,6 +141,7 @@ public class AudioManager : MonoBehaviour
     {
         PlaySFXRandomPitch(menuSFXs[0]);
     }
+
     public void turnPageNoise()
     {
         PlaySFXRandomPitch(menuSFXs[1]);
@@ -149,6 +150,16 @@ public class AudioManager : MonoBehaviour
     public void closeBookNoise()
     {
         PlaySFXRandomPitch(menuSFXs[2]);
+    }
+
+    public void takeObjectNoise()
+    {
+        PlaySFXRandomPitch(menuSFXs[3]);
+    }
+
+    public void putDownObjectNoise()
+    {
+        PlaySFXRandomPitch(menuSFXs[4]);
     }
 
     /*                                 */
