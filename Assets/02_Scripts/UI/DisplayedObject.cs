@@ -12,6 +12,7 @@ public class DisplayedObject : MonoBehaviour
     void Start()
     {
         EventManager.Instance.CollectObject.AddListener(HideMeMaybe);
+        EventManager.Instance.ShowAllObjects.AddListener(Show);
         getMats();
     }
     void OnMouseDown()
@@ -62,5 +63,9 @@ public class DisplayedObject : MonoBehaviour
         if (objectName != NOT_DEFINED && id == objectName) {
             gameObject.SetActive(false);
         }
+    }
+    public void Show()
+    {
+        gameObject.SetActive(true);
     }
 }

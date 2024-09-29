@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using static AudioManager;
 
 public class GameManager : MonoBehaviour
 {
@@ -39,7 +41,13 @@ public class GameManager : MonoBehaviour
 
     public void ResetGame()
     {
+        Debug.Log("GameManager ResetGame");
         GameState.Reset();
+        EventManager.Instance.ShowAllObjects.Invoke();
+
+        AudioManager.Instance.PlayMusic(music.menu);
+        AudioManager.Instance.StopAmbiant();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     // Update is called once per frame

@@ -40,7 +40,14 @@ public class EndGameMenu : MonoBehaviour
 
 
             List<Sprite> sprites = new List<Sprite>();
-            item.Hydrate(id, DataBase.vignettesSprites[id], GameState.IsAnachronic(id));
+            var sprite = DataBase.vignettesSprites.ContainsKey(id) ? DataBase.vignettesSprites[id] : null;
+            item.Hydrate(id, sprite, GameState.IsAnachronic(id));
         }
+    }
+    public void Replay()
+    {
+        // AudioManager.Instance.PlayMusic(music.menu);
+        // AudioManager.Instance.StopAmbiant();
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
