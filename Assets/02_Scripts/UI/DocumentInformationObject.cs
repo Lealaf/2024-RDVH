@@ -11,6 +11,9 @@ public class DocumentInformationObject : MonoBehaviour
     GameObject bookCover;
 
     [SerializeField]
+    GameObject openCarnetGameObjrct;
+
+    [SerializeField]
     Image image;
 
     [SerializeField]
@@ -24,7 +27,7 @@ public class DocumentInformationObject : MonoBehaviour
 
     public void Open()
     {
-        pageNumber = -1;
+        GoToPage(-1);
     }
 
     public void NextPage()
@@ -43,12 +46,14 @@ public class DocumentInformationObject : MonoBehaviour
         {
             if (idPage < 0)
             {
+                openCarnetGameObjrct.SetActive(false);
                 bookCover.SetActive(true);
                 pageNumber = -1;
 
             }
             else
             {
+                openCarnetGameObjrct.SetActive(true);
                 bookCover.SetActive(false);
                 if (idPage >= DataBase.data.objects.Count)
                 {
