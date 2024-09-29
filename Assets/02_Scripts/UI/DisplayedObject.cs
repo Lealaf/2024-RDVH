@@ -21,7 +21,7 @@ public class ManageObjectClick : MonoBehaviour
     void OnMouseDown()
     {
         if (!interactible) return;
-        EventManager.Instance.SelectObject.Invoke(name);
+        EventManager.Instance.SelectObject.Invoke(gameObject);
     }
 
     private void OnMouseOver()
