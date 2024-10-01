@@ -1,40 +1,42 @@
 
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class AudioManagerVolumeSetter : MonoBehaviour
 {
-    public AudioMixer mixer;
     public Slider masterSlider;
     public Slider musicSlider;
     public Slider sfxSlider;
 
     void Start()
     {
-        setLevels();
+        UpdateSliderValues();
     }
 
-    public void setLevels()
+    void UpdateSliderValues()
     {
-        masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 0.75f);
-        sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume", 0.75f);
-        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 0.75f);
+        masterSlider.value = AudioManager.Instance.GetMasterLevel();
+        musicSlider.value = AudioManager.Instance.GetMusicLevel();
+        sfxSlider.value = AudioManager.Instance.GetSFXLevel();
     }
 
     public void SetMasterLevel(float sliderValue)
     {
-        mixer.SetFloat("MasterVolume", Mathf.Log10(sliderValue) * 20);
-        PlayerPrefs.SetFloat("MasterVolume", sliderValue);
+        AudioManager.Instance.SetMasterLevel(sliderValue);
     }
+
     public void SetSFXLevel(float sliderValue)
     {
-        mixer.SetFloat("SFXVolume", Mathf.Log10(sliderValue) * 20);
-        PlayerPrefs.SetFloat("SFXVolume", sliderValue);
+        AudioManager.Instance.SetSFXLevel(sliderValue);
     }
+
     public void SetMusicLevel(float sliderValue)
     {
-        mixer.SetFloat("MusicVolume", Mathf.Log10(sliderValue) * 20);
-        PlayerPrefs.SetFloat("MusicVolume", sliderValue);
+        AudioManager.Instance.SetMusicLevel(sliderValue);
+    }
+
+    void OnEnable()
+    {
+        UpdateSliderValues();
     }
 }

@@ -157,7 +157,7 @@ Canvas:
   m_GameObject: {fileID: 5377474094837417704}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -875,6 +875,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3319634616370606280, guid: 0defee18808f2884abffca9273c35221, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3702491790670481534, guid: 0defee18808f2884abffca9273c35221, type: 3}
+      propertyPath: m_PresetInfoIsWorld
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4301124468654990196, guid: 0defee18808f2884abffca9273c35221, type: 3}

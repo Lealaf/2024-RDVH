@@ -32,11 +32,14 @@ public class GameManager : MonoBehaviour
     {
         DataBase.LoadData();
         GameState.Init();
+
+        /* Changer le menu manager en singleton */
         if (menuManager == null)
         {
             menuManager = GameObject.FindGameObjectsWithTag("MenuManager")[0].GetComponentInChildren<MenuManager>();
         }
-        menuManager.ShowStartMenu();
+
+        StartMenu();
     }
 
     public void ResetGame()
@@ -45,8 +48,8 @@ public class GameManager : MonoBehaviour
         GameState.Reset();
         EventManager.Instance.ShowAllObjects.Invoke();
 
-        AudioManager.Instance.PlayMusic(music.menu);
         AudioManager.Instance.StopAmbiant();
+        AudioManager.Instance.PlayMusic(music.menu);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -58,8 +61,9 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        AudioManager.Instance.PlayMusic(AudioManager.music.game1);
-        AudioManager.Instance.PlayAmbiant(AudioManager.ambiant.inside);
+        Debug.Log("Start Game");
+        AudioManager.Instance.PlayMusic(music.game1);
+        AudioManager.Instance.PlayAmbiant(ambiant.inside);
         menuManager.ShowInGameMenu();
     }
 
@@ -67,5 +71,12 @@ public class GameManager : MonoBehaviour
     {
         List<string> list = new List<string>(GameState.collected);
         menuManager.ShowEndMenu(GameState.score.ToString(), GameState.score > 3, list);
+    }
+
+    public void StartMenu()
+    {
+        AudioManager.Instance.StopAmbiant();
+        AudioManager.Instance.PlayMusic(music.menu);
+        menuManager.ShowStartMenu();
     }
 }

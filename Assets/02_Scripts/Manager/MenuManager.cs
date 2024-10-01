@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static AudioManager;
 
 public class MenuManager : MonoBehaviour
 {
@@ -15,7 +16,6 @@ public class MenuManager : MonoBehaviour
 
     [SerializeField]
     EndGameMenu endMenu;
-
 
     public void ShowInGameMenu()
     {
@@ -50,9 +50,6 @@ public class MenuManager : MonoBehaviour
         pauseMenu.SetActive(false);
         inGameMenu.SetActive(false);
     }
-
-    // Start is called before the first frame update
-
 
     // Update is called once per frame
     void Update()
