@@ -5,6 +5,9 @@ using static AudioManager;
 
 public class MenuManager : MonoBehaviour
 {
+    private static MenuManager instance = null;
+    public static MenuManager Instance => instance;
+
     [SerializeField]
     GameObject startMenu;
 
@@ -16,6 +19,21 @@ public class MenuManager : MonoBehaviour
 
     [SerializeField]
     EndGameMenu endMenu;
+
+
+    private void Awake()
+    {
+        Debug.Log("Awake menu manager");
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            instance = this;
+        }
+    }
 
     public void ShowInGameMenu()
     {

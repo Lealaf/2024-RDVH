@@ -56,7 +56,7 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("Awake du audio manager?");
+        Debug.Log("Awake audio manager");
         if (instance != null && instance != this)
         {
             Destroy(this.gameObject);

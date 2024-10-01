@@ -9,12 +9,9 @@ public class GameManager : MonoBehaviour
     private static GameManager instance = null;
     public static GameManager Instance => instance;
 
-    [SerializeField]
-    MenuManager menuManager;
-
-
     private void Awake()
     {
+        Debug.Log("Awake game manager");
         if (instance != null && instance != this)
         {
             Destroy(this.gameObject);
@@ -32,13 +29,6 @@ public class GameManager : MonoBehaviour
     {
         DataBase.LoadData();
         GameState.Init();
-
-        /* Changer le menu manager en singleton */
-        if (menuManager == null)
-        {
-            menuManager = GameObject.FindGameObjectsWithTag("MenuManager")[0].GetComponentInChildren<MenuManager>();
-        }
-
         StartMenu();
     }
 
@@ -47,9 +37,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("GameManager ResetGame");
         GameState.Reset();
         EventManager.Instance.ShowAllObjects.Invoke();
-
-        AudioManager.Instance.StopAmbiant();
-        AudioManager.Instance.PlayMusic(music.menu);
+        StartMenu();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -64,19 +52,20 @@ public class GameManager : MonoBehaviour
         Debug.Log("Start Game");
         AudioManager.Instance.PlayMusic(music.game1);
         AudioManager.Instance.PlayAmbiant(ambiant.inside);
-        menuManager.ShowInGameMenu();
+        MenuManager.Instance.ShowInGameMenu();
     }
 
     public void ExitGame()
     {
         List<string> list = new List<string>(GameState.collected);
-        menuManager.ShowEndMenu(GameState.score.ToString(), GameState.score > 3, list);
+        MenuManager.Instance.ShowEndMenu(GameState.score.ToString(), GameState.score > 3, list);
     }
 
     public void StartMenu()
     {
+        Debug.Log("Start Menu");
         AudioManager.Instance.StopAmbiant();
         AudioManager.Instance.PlayMusic(music.menu);
-        menuManager.ShowStartMenu();
+        MenuManager.Instance.ShowStartMenu();
     }
 }

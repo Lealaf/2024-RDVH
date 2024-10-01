@@ -66,8 +66,6 @@ public class InGameMenuManager : MonoBehaviour
 
     public void QuitGame()
     {
-        AudioManager.Instance.PlayMusic(music.menu);
-        AudioManager.Instance.StopAmbiant();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        GameManager.Instance.ResetGame();
     }
 }
