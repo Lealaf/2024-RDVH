@@ -177,6 +177,20 @@ public class AudioManager : MonoBehaviour
         Debug.Log("takeObjectNoise");
         PlaySFXRandomPitch(menuSFX.take);
     }
+
+    public void takeObjectNoise(AudioClip clip)
+    {
+        Debug.Log("takeObjectNoise "+clip);
+        if(clip == null)
+        {
+            PlaySFXRandomPitch(menuSFX.take);
+        }
+        else
+        {
+            PlaySFXRandomPitch(clip);
+        }
+    }
+
     public void turnPageNoise()
     {
         PlaySFXRandomPitch(menuSFX.page);

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DisplayedObject : MonoBehaviour
 {
+    public AudioClip pickupNoise;
     private List<Material> mats = new List<Material>();
     public bool interactible = false;
     public string objectName = NOT_DEFINED;
@@ -19,6 +20,7 @@ public class DisplayedObject : MonoBehaviour
     {
         if (!interactible) return;
         ChangeMatToNormal();
+        AudioManager.Instance.takeObjectNoise(pickupNoise);
         EventManager.Instance.SelectObject.Invoke(this);
     }
 
