@@ -176,6 +176,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7063081674234795053, guid: 75d108dea38cff742b8a1baeaa3a0444, type: 3}
+      propertyPath: m_text
+      value: Brochure
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
