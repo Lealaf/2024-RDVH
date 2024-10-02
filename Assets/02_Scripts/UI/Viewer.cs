@@ -12,7 +12,7 @@ public class Viewer : MonoBehaviour
 
     [SerializeField] RectTransform rectRefForRotate;
 
-
+    private Vector2 startingMousePosition;
 
     [SerializeField]
     float speed;
@@ -29,11 +29,15 @@ public class Viewer : MonoBehaviour
         
     }
 
+    public void StartRotate()
+    {
+        startingMousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+    }
 
     public void Rotate()
     {
-        Vector2 anchorPos = new Vector2 (Input.mousePosition.x, Input.mousePosition.y) - new Vector2(rectRefForRotate.position.x, rectRefForRotate.position.y);
-        anchorPos = new Vector2(anchorPos.x / rectRefForRotate.lossyScale.x, anchorPos.y / rectRefForRotate.lossyScale.y);
+        Vector2 anchorPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y) - startingMousePosition;//new Vector2(rectRefForRotate.position.x, rectRefForRotate.position.y);
+        //anchorPos = new Vector2(anchorPos.x / rectRefForRotate.lossyScale.x, anchorPos.y / rectRefForRotate.lossyScale.y);
 
         var vecRot = new Vector3(anchorPos.y, -anchorPos.x, 0) * Time.deltaTime * speed;
         gameObjectToRotate.transform.Rotate(vecRot, Space.World);
