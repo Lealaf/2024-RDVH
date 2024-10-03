@@ -19,7 +19,9 @@ public class CameraManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        index = 0;
+        targetPos = CameraPositions[index].position;
+        aimPos = CameraPositions[index].aim;
     }
 
     // Update is called once per frame
@@ -52,7 +54,7 @@ public class CameraManager : MonoBehaviour
 
     private void getPreviousCamera()
     {
-        index = (index - 1) < 0 ? CameraPositions.Length:index-1;
+        index = (index - 1) < 0 ? CameraPositions.Length-1:index-1;
         targetPos = CameraPositions[index].position;
         aimPos = CameraPositions[index].aim;
     }
