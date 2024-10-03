@@ -20,6 +20,12 @@ public class DocumentInformationObject : MonoBehaviour
     TextMeshProUGUI objectName;
 
     [SerializeField]
+    TextMeshProUGUI creator;
+
+    [SerializeField]
+    TextMeshProUGUI date;
+
+    [SerializeField]
     TextMeshProUGUI objectDescriptionText;
 
     int pageNumber;
@@ -89,6 +95,15 @@ public class DocumentInformationObject : MonoBehaviour
     {
         image.sprite = sprite;
         this.objectName.text = name;
+        this.objectDescriptionText.text = descriptionText;
+    }
+
+    public void Hydrate(Sprite sprite, string name, string creator, string date, string descriptionText)
+    {
+        image.sprite = sprite;
+        this.objectName.text = name;
+        this.creator.text = creator;
+        this.date.text = date;
         this.objectDescriptionText.text = descriptionText;
     }
 
