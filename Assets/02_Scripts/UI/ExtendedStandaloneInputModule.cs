@@ -32,11 +32,12 @@ public class ExtendedStandaloneInputModule : StandaloneInputModule
 
                 foreach (var canvasGroup in parentsCanvasGroup)
                 {
-                    if (canvasGroup.alpha > 0 )
+                    if (canvasGroup.alpha <= 0 )
                     {
-                        return true;
+                        return false;
                     }
                 }
+                return true;
             }
 
         }
