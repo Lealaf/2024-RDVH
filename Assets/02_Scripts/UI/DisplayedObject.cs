@@ -18,7 +18,7 @@ public class DisplayedObject : MonoBehaviour
     }
     void OnMouseDown()
     {
-        if (!interactible) return;
+        if (!interactible || ExtendedStandaloneInputModule.IsHoveringAnyVisibleImage()) return;
         ChangeMatToNormal();
         AudioManager.Instance.takeObjectNoise(pickupNoise);
         EventManager.Instance.SelectObject.Invoke(this);
@@ -26,7 +26,7 @@ public class DisplayedObject : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if (!interactible) return;
+        if (!interactible || ExtendedStandaloneInputModule.IsHoveringAnyVisibleImage()) return;
         foreach (Material mat in mats) {
             mat.SetInt("_hover", 1);
         }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3346821150787823374}
   - component: {fileID: 8665986292698556566}
-  - component: {fileID: 5808846949652231692}
+  - component: {fileID: 407518545641642371}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
---- !u!114 &5808846949652231692
+--- !u!114 &407518545641642371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,7 +57,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 673662200796725127}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a56ce3f4e9b9d646b3f994487570838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_SendPointerHoverToParent: 1
