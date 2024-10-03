@@ -432,7 +432,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &7235618078393795818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,7 +484,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 61}
+  m_AnchoredPosition: {x: 0, y: 57}
   m_SizeDelta: {x: 1920, y: 550}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1536547419256678690
@@ -515,9 +515,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Elisa Chazal - Doctorante en histoire\nL\xE9a Laffitte - Programmation\nNicolas
-    Decoster - Programmation\nSolenn Ripoteau - 3D Art\nVincent Bonnet - 3D Art\nKevin
-    Colombin - Sound design\nFlorent Jamin - Game Design"
+  m_text: "<b>Elisa Chazal</b> - <size=90%> Doctorante en histoire contemporaine
+    \xE0 l\u2019Institut Universitaire Europ\xE9en de Florence (EUI) </size>\n<b>L\xE9a
+    Laffitte</b> -<size=90%> Programmation</size>\n<b>Nicolas Decoster</b> -<size=90%>
+    Programmation</size>\n<b>Solenn Ripoteau</b> -<size=90%> 3D Art</size>\n<b>Vincent
+    Bonnet</b> -<size=90%> 3D Art</size>\n<b>Kevin Colombin</b> -<size=90%> Sound
+    design</size>\n<b>Florent Jamin</b> -<size=90%> Game Design</size>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 53c0ebd6c329af0488d1c42f572fc926, type: 2}
   m_sharedMaterial: {fileID: -8991275671336483309, guid: 53c0ebd6c329af0488d1c42f572fc926, type: 2}
@@ -544,8 +547,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65
-  m_fontSizeBase: 65
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
