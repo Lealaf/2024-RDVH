@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class CameraManager : MonoBehaviour
 {
-    public CameraPosition[] CameraPositions;
+    public GameObject[] cameraPositions;
     private int index;
 
     public float smoothTime = 1.5f;
@@ -14,14 +14,22 @@ public class CameraManager : MonoBehaviour
 
     private Vector3 m_currentVelocity = Vector3.zero;
 
-    private Vector3 targetPos, aimPos;
+    private Vector3 targetPos;
+
+    private Quaternion targetRotation;
+
+    private float delta = 0.02f;
 
     // Start is called before the first frame update
     void Start()
     {
+        foreach (var cam in cameraPositions)
+        {
+            cam.gameObject.layer = 15;
+        }
         index = 0;
-        targetPos = CameraPositions[index].position;
-        aimPos = CameraPositions[index].aim;
+        targetPos = cameraPositions[index].gameObject.transform.position;
+        targetRotation = cameraPositions[index].gameObject.transform.rotation;
     }
 
     // Update is called once per frame
@@ -34,28 +42,25 @@ public class CameraManager : MonoBehaviour
         {
             getPreviousCamera();
         }
-
-        if (targetPos != transform.position)
+        //if (targetPos != Camera.main.transform.position)
+        if (Vector3.Distance(targetPos, Camera.main.transform.position) > delta || Quaternion.Angle(transform.rotation, targetRotation) > delta)
         {
-            transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref m_currentVelocity, smoothTime);
-            
-            Vector3 relativePos = aimPos - transform.position;
-            Quaternion q = Quaternion.LookRotation(relativePos, Vector3.up);
-            transform.rotation = Quaternion.Slerp(transform.rotation, q, rotationSpeed * Time.deltaTime);
+            Camera.main.transform.position = Vector3.SmoothDamp(Camera.main.transform.position, targetPos, ref m_currentVelocity, smoothTime);
+            Camera.main.transform.rotation = Quaternion.Slerp(Camera.main.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
     }
 
     private void getNextCamera()
     {
-        index = (index + 1) % CameraPositions.Length;
-        targetPos = CameraPositions[index].position;
-        aimPos = CameraPositions[index].aim;
+        index = (index + 1) % cameraPositions.Length;
+        targetPos = cameraPositions[index].gameObject.transform.position;
+        targetRotation = cameraPositions[index].gameObject.transform.rotation;
     }
 
     private void getPreviousCamera()
     {
-        index = (index - 1) < 0 ? CameraPositions.Length-1:index-1;
-        targetPos = CameraPositions[index].position;
-        aimPos = CameraPositions[index].aim;
+        index = (index - 1) < 0 ? cameraPositions.Length-1:index-1;
+        targetPos = cameraPositions[index].gameObject.transform.position;
+        targetRotation = cameraPositions[index].gameObject.transform.rotation;
     }
 }
