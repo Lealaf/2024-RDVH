@@ -10,7 +10,8 @@ public class ExtendedStandaloneInputModule : StandaloneInputModule
         return eventData;
     }
 
-    public static bool IsHoveringAnyVisibleImage()
+    //Survole une image ou rawImage visible
+    public static bool IsHoveringAnyVisibleUI()
     {
         // On regarde si le curseur ne survole pas déjà un objet 2D au premier plan
         PointerEventData ped = ExtendedStandaloneInputModule.GetPointerEventData(); // Données du pointeur de la souris
@@ -25,19 +26,18 @@ public class ExtendedStandaloneInputModule : StandaloneInputModule
             if (image != null && image.color.a>0 || rawImage != null && rawImage.color.a > 0) // Si l'un d'eux est une image visible
             {
                 var parentsCanvasGroup = go.GetComponentsInParent<CanvasGroup>();
-                if (parentsCanvasGroup == null)
+                if (parentsCanvasGroup == null || parentsCanvasGroup.Length == 0)
                 {
                     return true;
                 }
 
                 foreach (var canvasGroup in parentsCanvasGroup)
                 {
-                    if (canvasGroup.alpha <= 0 )
+                    if (canvasGroup.alpha > 0 )
                     {
-                        return false;
+                        return true;
                     }
                 }
-                return true;
             }
 
         }
