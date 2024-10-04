@@ -2439,6 +2439,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1254759646715259224, guid: f3b0ce095daaa4741a3a7244af065717, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254759646715259224, guid: f3b0ce095daaa4741a3a7244af065717, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2480,7 +2484,7 @@ PrefabInstance:
       objectReference: {fileID: 7870889412795152376}
     - target: {fileID: 7855938147303245587, guid: f3b0ce095daaa4741a3a7244af065717, type: 3}
       propertyPath: m_Name
-      value: Top Menu
+      value: Explore Menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
