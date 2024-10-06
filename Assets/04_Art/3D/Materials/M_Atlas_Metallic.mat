@@ -63,6 +63,14 @@ Material:
         m_Texture: {fileID: 2800000, guid: 9341bfca7cee9d344a007ae36f6ebba3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Triplanar_1d251d5e22004f79a80315f9bc1d4a6a_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 9341bfca7cee9d344a007ae36f6ebba3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Triplanar_7bef4c168546458aabcb4a0516f61044_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 0abff230a23355a4887bc1df8b53152d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BUILTIN_QueueControl: 0
@@ -76,6 +84,7 @@ Material:
     - _GlossyReflections: 1
     - _Metallic: 0.67
     - _Mode: 0
+    - _Noise_Intensity: 0
     - _OcclusionStrength: 1
     - _Opacity: 1
     - _Parallax: 0.02
@@ -91,6 +100,7 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _NoiseColor: {r: 0, g: 0, b: 0, a: 0}
     - _hoverColor: {r: 0.22623697, g: 0.57539415, b: 0.5849056, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8494572887826383987
