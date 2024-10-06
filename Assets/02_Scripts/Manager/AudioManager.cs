@@ -159,7 +159,6 @@ public class AudioManager : MonoBehaviour
             case menuSFX.pickUp:
                 clip = menuSFXs[5];
                 break;
-                
         }
         PlaySFXRandomPitch(clip, percentage);
     }

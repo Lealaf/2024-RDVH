@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,10 +8,14 @@ using UnityEngine.UI;
 public class EndGameMenu : MonoBehaviour
 {
     [SerializeField]
-    TextMeshProUGUI score;
+    TextMeshProUGUI nbAnaFound;
 
     [SerializeField]
-    GameObject scoreText;
+    TextMeshProUGUI remainsToBeFound;
+
+    [SerializeField]
+    TextMeshProUGUI cluesUsed;
+
 
     [SerializeField]
     GameObject goodText;
@@ -24,30 +29,90 @@ public class EndGameMenu : MonoBehaviour
     [SerializeField]
     ItemResult prefabeImageItem;
 
-    
-    public void Hydrate(string score, bool goodScore, List<string> listString)
+    [Header("Answer Show")]
+
+    [SerializeField]
+    GameObject goodAnswer;
+
+    [SerializeField]
+    GameObject badAnswer;
+
+    [SerializeField]
+    Image imageShow;
+
+    [SerializeField]
+    TextMeshProUGUI objectName;
+
+    [SerializeField]
+    TextMeshProUGUI creator;
+
+    [SerializeField]
+    TextMeshProUGUI date;
+
+    [SerializeField]
+    TextMeshProUGUI objectDescriptionText;
+
+
+    public void Hydrate(string nbAnaFound, string remainsToBeFound, string cluesUsed, bool goodScore, List<string> listString)
     {
-        this.score.text = score;
+        this.nbAnaFound.text = nbAnaFound;
         goodText.SetActive(goodScore);
         badText.SetActive(!goodScore);
 
+        this.remainsToBeFound.text = remainsToBeFound;
+        this.cluesUsed.text = cluesUsed;
 
-        //this.scoreText.text = textScore;
 
+        ItemResult firstItem = null;
         foreach (string id in listString)
         {
-            var item= Instantiate<ItemResult>(prefabeImageItem, contentBadItem);
+            var item = Instantiate<ItemResult>(prefabeImageItem, contentBadItem);
 
+            if (firstItem == null) {
+                firstItem = item;
+            }
 
             List<Sprite> sprites = new List<Sprite>();
             var sprite = DataBase.vignettesSprites.ContainsKey(id) ? DataBase.vignettesSprites[id] : null;
-            item.Hydrate(id, sprite, GameState.IsAnachronic(id));
+            Debug.LogError("TODO");
+            if (DataBase.data.objects.Exists(o => o.ID == id))
+            {
+                var obj = DataBase.data.objects.Find(o => o.ID == id);
+                item.Hydrate(id, sprite, GameState.IsAnachronic(id), null, obj.siecle, obj.description);
+            }
+            else
+            {
+                item.Hydrate(id, sprite, GameState.IsAnachronic(id), null, null, null);
+            }
+
+            var button = item.GetComponent<Button>();
+            if (button != null)
+            {
+                button.onClick.AddListener(() => ChangeShwoAnswer(item));
+            }
+        }
+
+        if(firstItem != null)
+        {
+            ChangeShwoAnswer(firstItem);
         }
     }
-    public void Replay()
+    
+
+    public void ChangeShwoAnswer(ItemResult itemResult)
     {
-        // AudioManager.Instance.PlayMusic(music.menu);
-        // AudioManager.Instance.StopAmbiant();
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
+        goodAnswer.SetActive(itemResult.isGoodAnswer);
+        badAnswer.SetActive(!itemResult.isGoodAnswer);
+
+        imageShow.sprite = itemResult.sprite;
+        objectName.text = itemResult.nameElem.text;
+        creator.text = itemResult.creator;
+        date.text = itemResult.date;
+        objectDescriptionText.text = itemResult.objectDescriptionText;
+
+
     }
+
+
 }

@@ -58,7 +58,8 @@ public class GameManager : MonoBehaviour
     public void ExitGame()
     {
         List<string> list = new List<string>(GameState.collected);
-        MenuManager.Instance.ShowEndMenu(GameState.score.ToString(), GameState.score > 3, list);
+        Debug.LogError("TODO");
+        MenuManager.Instance.ShowEndMenu(GameState.GetNbAnachronicFound().ToString(), "todo", "todo", GameState.score > 3, list);
     }
 
     public void StartMenu()

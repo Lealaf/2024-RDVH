@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using UnityEngine;
 
@@ -74,5 +75,11 @@ public class GameState
         }
 
         score = nAnachronic - nNonAnachronic;
+    }
+
+    public static int GetNbAnachronicFound()
+    {
+        nAnachronic = collected.Count(id => IsAnachronic(id));
+        return nAnachronic;
     }
 }

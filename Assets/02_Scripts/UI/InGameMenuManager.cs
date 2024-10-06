@@ -7,7 +7,7 @@ using static AudioManager;
 public class InGameMenuManager : MonoBehaviour
 {
     [SerializeField]
-    GameObject topMenu;
+    GameObject exploreMenu;
 
     [SerializeField]
     GameObject optionMenu;
@@ -18,6 +18,9 @@ public class InGameMenuManager : MonoBehaviour
     [SerializeField]
     DocumentInformationObject carnet;
 
+    [SerializeField]
+    CheckObjectMenu checkMenu;
+
 
     [SerializeField]
     GameObject menuBrochure;
@@ -26,14 +29,30 @@ public class InGameMenuManager : MonoBehaviour
 
     public void OpenOptionMenu( bool open)
     {
-        topMenu.SetActive(!open);
+        checkMenu.gameObject.SetActive(!open);
+        exploreMenu.SetActive(!open);
         optionMenu.SetActive(open);
     }
     // Start is called before the first frame update
     void Start()
     {
-        CloseAll();
-        
+        Init();
+        EventManager.Instance.SelectObject.AddListener(OpenAndHydrate);
+
+    }
+
+    public void OpenAndHydrate(DisplayedObject obj)
+    {
+        checkMenu.gameObject.SetActive(true);
+        exploreMenu.SetActive(false);
+        checkMenu.Hydrate(obj);
+
+    }
+
+    public void CloseCheckObjectMenu()
+    {
+        checkMenu.gameObject.SetActive(false);
+        exploreMenu.SetActive(true);
     }
 
     public void OpenCarnet(bool open)
@@ -57,11 +76,12 @@ public class InGameMenuManager : MonoBehaviour
         menuBrochure.SetActive(!open);
     }
 
-    public void CloseAll()
+    public void Init()
     {
         OpenCarnet(false);
         OpenBrochure(false);
         OpenOptionMenu(false);
+        CloseCheckObjectMenu();
     }
 
     public void QuitGame()

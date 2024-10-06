@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -91,20 +92,31 @@ public class DocumentInformationObject : MonoBehaviour
         Hydrate(sprite, obj.nom, obj.description);
     }
 
+    public string RemoveBoldTags(string input)
+    {
+        // Utilise une expression régulière pour supprimer les balises <b> et </b>
+        return Regex.Replace(input, "<[/]?b>", "");
+    }
+
     public void Hydrate(Sprite sprite, string name, string descriptionText)
     {
         image.sprite = sprite;
         this.objectName.text = name;
-        this.objectDescriptionText.text = descriptionText;
+        // C'est ici que ça se passe pour gérer l'affchage des textes en gras en
+        // fonction de l'activation des indices.
+        bool displayBoldText = true;
+        if (displayBoldText) {
+            this.objectDescriptionText.text = descriptionText;
+        } else {
+            this.objectDescriptionText.text = RemoveBoldTags(descriptionText);
+        }
     }
 
     public void Hydrate(Sprite sprite, string name, string creator, string date, string descriptionText)
     {
-        image.sprite = sprite;
-        this.objectName.text = name;
         this.creator.text = creator;
         this.date.text = date;
-        this.objectDescriptionText.text = descriptionText;
+        Hydrate(sprite, name, descriptionText);
     }
 
 

@@ -840,6 +840,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2964275740194517320}
     m_Modifications:
+    - target: {fileID: 2767493611038469833, guid: e3dc21d82eb4e0d43be6e9c0e8d6ddc3, type: 3}
+      propertyPath: m_text
+      value: Retour
+      objectReference: {fileID: 0}
     - target: {fileID: 4277292713620293623, guid: e3dc21d82eb4e0d43be6e9c0e8d6ddc3, type: 3}
       propertyPath: m_Name
       value: Button
