@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,7 +9,7 @@ public class ItemResult : MonoBehaviour
 {
 
     [SerializeField]
-    TextMeshProUGUI nameElem;
+    public TextMeshProUGUI nameElem;
 
     [SerializeField]
     Image image;
@@ -19,12 +20,34 @@ public class ItemResult : MonoBehaviour
     [SerializeField]
     GameObject bad;
 
-    public void Hydrate(string name, Sprite sprite , bool idgood)
+    [NonSerialized]
+    public bool isGoodAnswer;
+
+    [NonSerialized]
+    public Sprite sprite;
+
+    [NonSerialized]
+    public string creator;
+
+    [NonSerialized]
+    public string date;
+
+    [NonSerialized]
+    public string objectDescriptionText;
+
+    public void Hydrate(string name, Sprite sprite , bool isgood, string creator, string date, string objectDescriptionText)
     {
         this.nameElem.text = name;
+        this.sprite = sprite;
         image.sprite = sprite;
 
-        good.SetActive(idgood);
-        bad.SetActive(!idgood);
+        good.SetActive(isgood);
+        bad.SetActive(!isgood);
+
+        isGoodAnswer = isgood;
+
+        this.creator = creator;
+        this.date = date;
+        this.objectDescriptionText = objectDescriptionText;
     }
 }
