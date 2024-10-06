@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac49d4ee4b960a44aaa60caa11e95014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topMenu: {fileID: 2252402671176622326}
+  exploreMenu: {fileID: 2252402671176622326}
   optionMenu: {fileID: 3629015200295637697}
   brochure: {fileID: 3038276474311164599}
   carnet: {fileID: 3595412068826346735}
@@ -1289,6 +1289,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7894372473900393286, guid: 22e5a00b1a5c744499f930fd0da766c3, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4850317399920771257, guid: 74310fc17af530f4c902e84ddbf2f5d1, type: 2}
     - target: {fileID: 8393295472592106248, guid: 22e5a00b1a5c744499f930fd0da766c3, type: 3}
       propertyPath: m_Name
       value: IntroMenu
