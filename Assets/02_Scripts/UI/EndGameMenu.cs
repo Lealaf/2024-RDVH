@@ -64,7 +64,7 @@ public class EndGameMenu : MonoBehaviour
         {
             var item = Instantiate<ItemResult>(prefabeImageItem, contentBadItem);
 
-            if (item == null) {
+            if (firstItem == null) {
                 firstItem = item;
             }
 
