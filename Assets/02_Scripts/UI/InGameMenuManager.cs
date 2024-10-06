@@ -7,7 +7,7 @@ using static AudioManager;
 public class InGameMenuManager : MonoBehaviour
 {
     [SerializeField]
-    GameObject topMenu;
+    GameObject exploreMenu;
 
     [SerializeField]
     GameObject optionMenu;
@@ -26,7 +26,7 @@ public class InGameMenuManager : MonoBehaviour
 
     public void OpenOptionMenu( bool open)
     {
-        topMenu.SetActive(!open);
+        exploreMenu.SetActive(!open);
         optionMenu.SetActive(open);
     }
     // Start is called before the first frame update
