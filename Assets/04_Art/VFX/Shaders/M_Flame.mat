@@ -36,8 +36,8 @@ Material:
     - _Alpha_Clip_Slider: 0
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _DeformationIntensity: 3.2
-    - _DeformationSpeed: 1.36
+    - _DeformationIntensity: 4.46
+    - _DeformationSpeed: 3
     - _Emissive_Intensity: 10
     m_Colors:
     - _ColorInside: {r: 0.9622641, g: 0.37488928, b: 0.14070836, a: 0}
