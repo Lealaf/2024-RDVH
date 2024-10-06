@@ -34,7 +34,7 @@ Material:
     - _power: 5.68
     m_Colors:
     - _BaseColor: {r: 0.799, g: 0.742467, b: 0.68593395, a: 0}
-    - _hoverColor: {r: 0.85490197, g: 0.8901961, b: 0.84313726, a: 0}
+    - _hoverColor: {r: 0.5245282, g: 0.5245282, b: 0.5245282, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &622600838121281514
 MonoBehaviour:
