@@ -60,9 +60,9 @@ public class MenuManager : MonoBehaviour
         inGameMenu.SetActive(false);
     }
 
-    public void ShowEndMenu(string score, string remainsToBeFound, string cluesUsed, bool goodScore, List<string> listString)
+    public void ShowEndMenu(string nbAnaFound, string remainsToBeFound, string cluesUsed, bool goodScore, List<string> listString)
     {
-        endMenu.Hydrate(score, remainsToBeFound, cluesUsed, goodScore, listString);
+        endMenu.Hydrate(nbAnaFound, remainsToBeFound, cluesUsed, goodScore, listString);
         endMenu.gameObject.SetActive(true);
         startMenu.SetActive(false);
         pauseMenu.SetActive(false);

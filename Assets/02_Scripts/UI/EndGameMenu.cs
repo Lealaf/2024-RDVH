@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class EndGameMenu : MonoBehaviour
 {
     [SerializeField]
-    TextMeshProUGUI score;
+    TextMeshProUGUI nbAnaFound;
 
     [SerializeField]
     TextMeshProUGUI remainsToBeFound;
@@ -53,11 +53,15 @@ public class EndGameMenu : MonoBehaviour
     TextMeshProUGUI objectDescriptionText;
 
 
-    public void Hydrate(string score, string remainsToBeFound, string cluesUsed, bool goodScore, List<string> listString)
+    public void Hydrate(string nbAnaFound, string remainsToBeFound, string cluesUsed, bool goodScore, List<string> listString)
     {
-        this.score.text = score;
+        this.nbAnaFound.text = nbAnaFound;
         goodText.SetActive(goodScore);
         badText.SetActive(!goodScore);
+
+        this.remainsToBeFound.text = remainsToBeFound;
+        this.cluesUsed.text = cluesUsed;
+
 
         ItemResult firstItem = null;
         foreach (string id in listString)
