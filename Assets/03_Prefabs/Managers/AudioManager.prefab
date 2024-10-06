@@ -708,6 +708,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b7c413a17cafd8e4cb5b5a16cd69b439, type: 3}
   - {fileID: 8300000, guid: e571374d3d9eb3e4ca9011e6e7ca79ea, type: 3}
   - {fileID: 8300000, guid: 9a15555e8c86fff4cbd3d9b193973a94, type: 3}
+  - {fileID: 8300000, guid: d9c3bf6240cf82a4b94aa48f26197573, type: 3}
   ambiantsSounds:
   - {fileID: 8300000, guid: 886e4087146865741bc0ab90d62924d8, type: 3}
   - {fileID: 8300000, guid: 445fce86e6171ed44b8fe12aec484582, type: 3}

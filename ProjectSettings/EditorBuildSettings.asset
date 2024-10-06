@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/01_Scenes/Room1_Art_CamMouve_2.unity
-    guid: 6cfc7331608cd76419286ecbc4c53c80
+    path: Assets/01_Scenes/Room1_Art.unity
+    guid: 5374fe0dac8ba8149890cee34f7221c8
   m_configObjects: {}

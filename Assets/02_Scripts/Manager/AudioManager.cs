@@ -46,7 +46,8 @@ public class AudioManager : MonoBehaviour
         page,
         book,
         take,
-        putDown
+        putDown,
+        pickUp
     }
     public enum ambiant
     {
@@ -155,6 +156,10 @@ public class AudioManager : MonoBehaviour
             case menuSFX.book:
                 clip = menuSFXs[2];
                 break;
+            case menuSFX.pickUp:
+                clip = menuSFXs[5];
+                break;
+                
         }
         PlaySFXRandomPitch(clip, percentage);
     }
@@ -183,7 +188,7 @@ public class AudioManager : MonoBehaviour
         Debug.Log("takeObjectNoise "+clip);
         if(clip == null)
         {
-            PlaySFXRandomPitch(menuSFX.take);
+            PlaySFXRandomPitch(menuSFX.pickUp);
         }
         else
         {
