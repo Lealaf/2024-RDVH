@@ -382,6 +382,10 @@ PrefabInstance:
       propertyPath: m_text
       value: ~ 1900 ~
       objectReference: {fileID: 0}
+    - target: {fileID: 6916915373073582186, guid: 7412a58047498c349aa55fcd2df485b5, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7572282383499596425, guid: 7412a58047498c349aa55fcd2df485b5, type: 3}
       propertyPath: m_text
       value: Les Chroniques d'Ana
