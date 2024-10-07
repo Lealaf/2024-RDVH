@@ -67,8 +67,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bef84a1858ae164281ffee5e101a4c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupNoise: {fileID: 0}
   interactible: 1
-  objectName: Barrel
+  objectName: Tonneau
 --- !u!1001 &1894505227758047666
 PrefabInstance:
   m_ObjectHideFlags: 0
