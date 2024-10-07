@@ -61,7 +61,7 @@ Material:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _Blend_Opacity: 0
-    - _MatA_TilingTexture: 3.77
+    - _MatA_TilingTexture: 0.17
     - _Mat_A_Uses_Texture: 1
     - _Mat_B_Uses_texture: 0
     - _Metallic: 0

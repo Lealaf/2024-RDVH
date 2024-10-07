@@ -22,7 +22,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: M_FogCard_01 1
   m_Shader: {fileID: -6465566751694194690, guid: 01ab63af58d0c904d9456e913cd7c3a3, type: 3}
-  m_Parent: {fileID: 0}
+  m_Parent: {fileID: 2100000, guid: 69f74916cd8213c419783d787355409b, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -42,10 +42,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BUILTIN_QueueControl: 0
-    - _BUILTIN_QueueOffset: 0
-    - _Emissiveintensity: 4.46
-    - _Opacity: 0.18
-    m_Colors:
-    - _Color: {r: 0.9622642, g: 0.17379683, b: 0.077162705, a: 0}
+    - _Alpha_Clip_Slider: 0.4
+    - _DeformationIntensity: 0.45
+    - _DeformationSpeed: 0.45
+    m_Colors: []
   m_BuildTextureStacks: []

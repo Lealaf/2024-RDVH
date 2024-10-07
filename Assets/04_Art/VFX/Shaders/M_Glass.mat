@@ -41,7 +41,7 @@ Material:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _Metallic: 0.7
-    - _Opacity: 0.35
+    - _Opacity: 0.2
     - _Smoothness: 0.8
     m_Colors:
     - _Color: {r: 0.30588233, g: 0.64980316, b: 0.81960785, a: 0}
