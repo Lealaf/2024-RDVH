@@ -97,8 +97,8 @@ Material:
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
-    - _NoiseTiling: 0.44
-    - _Noise_Intensity: 0.35
+    - _NoiseTiling: 0.25
+    - _Noise_Intensity: 0.29
     - _OcclusionStrength: 1
     - _Opacity: 1
     - _Parallax: 0.02
