@@ -78,7 +78,7 @@ public class EndGameMenu : MonoBehaviour
             if (DataBase.data.objects.Exists(o => o.ID == id))
             {
                 var obj = DataBase.data.objects.Find(o => o.ID == id);
-                item.Hydrate(obj.nom, sprite, GameState.IsAnachronic(id), null, obj.siecle, obj.description);
+                item.Hydrate(obj.nom, sprite, GameState.IsAnachronic(id), obj.inventeur, obj.date, obj.description);
             }
             else
             {

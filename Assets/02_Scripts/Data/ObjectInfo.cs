@@ -9,5 +9,6 @@ public class ObjectInfo
     public string nom;
     public string description;
     public string type;
-    public string siecle;
+    public string date;
+    public string inventeur;
 }
