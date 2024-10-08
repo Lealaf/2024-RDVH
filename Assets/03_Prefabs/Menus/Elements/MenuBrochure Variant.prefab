@@ -176,6 +176,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6282311252323716548, guid: 75d108dea38cff742b8a1baeaa3a0444, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282311252323716548, guid: 75d108dea38cff742b8a1baeaa3a0444, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282311252323716548, guid: 75d108dea38cff742b8a1baeaa3a0444, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 6165244672111633792, guid: 7c71d01a830dc8248addc90b214d5225, type: 3}
+    - target: {fileID: 6282311252323716548, guid: 75d108dea38cff742b8a1baeaa3a0444, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282311252323716548, guid: 75d108dea38cff742b8a1baeaa3a0444, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: openBrochureNoise
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282311252323716548, guid: 75d108dea38cff742b8a1baeaa3a0444, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282311252323716548, guid: 75d108dea38cff742b8a1baeaa3a0444, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282311252323716548, guid: 75d108dea38cff742b8a1baeaa3a0444, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7063081674234795053, guid: 75d108dea38cff742b8a1baeaa3a0444, type: 3}
       propertyPath: m_text
       value: Brochure

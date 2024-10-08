@@ -705,10 +705,11 @@ MonoBehaviour:
   menuSFXs:
   - {fileID: 8300000, guid: ff2426871a703e04da748b999404499b, type: 3}
   - {fileID: 8300000, guid: c56d8822dc8ef3149a9db99d8315dc10, type: 3}
-  - {fileID: 8300000, guid: b7c413a17cafd8e4cb5b5a16cd69b439, type: 3}
+  - {fileID: 8300000, guid: c68b73edad84a8c4c9707db6c1a60d25, type: 3}
   - {fileID: 8300000, guid: e571374d3d9eb3e4ca9011e6e7ca79ea, type: 3}
-  - {fileID: 8300000, guid: 9a15555e8c86fff4cbd3d9b193973a94, type: 3}
-  - {fileID: 8300000, guid: d9c3bf6240cf82a4b94aa48f26197573, type: 3}
+  - {fileID: 8300000, guid: 948baa4775948e3419632738afd1618a, type: 3}
+  - {fileID: 8300000, guid: e809821a711414c4b84cd82bccf3001b, type: 3}
+  - {fileID: 8300000, guid: f943852eaaebc2c4e9e8fca0a1277a88, type: 3}
   ambiantsSounds:
   - {fileID: 8300000, guid: 886e4087146865741bc0ab90d62924d8, type: 3}
   - {fileID: 8300000, guid: 445fce86e6171ed44b8fe12aec484582, type: 3}

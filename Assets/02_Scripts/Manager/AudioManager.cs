@@ -47,7 +47,8 @@ public class AudioManager : MonoBehaviour
         book,
         take,
         putDown,
-        pickUp
+        pickUp,
+        brochure
     }
     public enum ambiant
     {
@@ -144,20 +145,23 @@ public class AudioManager : MonoBehaviour
         {
             case menuSFX.button:
                 break;
-            case menuSFX.take:
-                clip = menuSFXs[3];
-                break;
-            case menuSFX.putDown:
-                clip = menuSFXs[4];
-                break;
             case menuSFX.page:
                 clip = menuSFXs[1];
                 break;
             case menuSFX.book:
                 clip = menuSFXs[2];
                 break;
+            case menuSFX.take:
+                clip = menuSFXs[3];
+                break;
+            case menuSFX.putDown:
+                clip = menuSFXs[4];
+                break;
             case menuSFX.pickUp:
                 clip = menuSFXs[5];
+                break;
+            case menuSFX.brochure:
+                clip = menuSFXs[6];
                 break;
         }
         PlaySFXRandomPitch(clip, percentage);
@@ -202,6 +206,10 @@ public class AudioManager : MonoBehaviour
     public void closeBookNoise()
     {
         PlaySFXRandomPitch(menuSFX.book);
+    }
+    public void openBrochureNoise()
+    {
+        PlaySFXRandomPitch(menuSFX.brochure);
     }
 
     /*                                  */
