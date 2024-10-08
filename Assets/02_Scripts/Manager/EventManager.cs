@@ -17,6 +17,7 @@ public class EventManager : MonoBehaviour
     public UnityEvent<string> CollectObject;
     public UnityEvent CollectedObjectsUpdated;
     public UnityEvent ShowAllObjects;
+    public UnityEvent CurrentNbCluesUpdated;
 
     private void Awake()
     {

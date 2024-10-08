@@ -13,6 +13,8 @@ public class GameState
     public static int score = 0;
     public static int nAnachronic = 0;
     public static int nNonAnachronic = 0;
+    public static int maxNbClues = 10;
+    public static int currentNbClues;
     
     public static void Init()
     {
@@ -20,6 +22,7 @@ public class GameState
             collected = new HashSet<string>();
             EventManager.Instance.CollectedObjectsUpdated.Invoke();
         }
+        SetCurrentNbClues(maxNbClues);
     }
 
     public static void Reset()
@@ -27,6 +30,7 @@ public class GameState
         collected.Clear();
         ComputeScore();
         EventManager.Instance.CollectedObjectsUpdated.Invoke();
+        SetCurrentNbClues(maxNbClues);
     }
 
     public static void CollectObject(string id)
@@ -81,5 +85,11 @@ public class GameState
     {
         nAnachronic = collected.Count(id => IsAnachronic(id));
         return nAnachronic;
+    }
+
+    public static void SetCurrentNbClues(int nbClues)
+    {
+        currentNbClues = nbClues;
+        EventManager.Instance.CurrentNbCluesUpdated.Invoke();
     }
 }

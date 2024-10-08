@@ -38,6 +38,12 @@ public class DocumentInformationObject : MonoBehaviour
 
     int pageNumber;
 
+    void Start()
+    {
+        EventManager.Instance.CurrentNbCluesUpdated.AddListener(
+            () => nbClueText.text = GameState.currentNbClues.ToString()
+        );
+    }
 
     public void Open()
     {
@@ -105,7 +111,7 @@ public class DocumentInformationObject : MonoBehaviour
         return Regex.Replace(input, "<[/]?b>", "");
     }
 
-    public void Hydrate(Sprite sprite, string name, string descriptionText, int nbClue = 0, bool stillClue = false)
+    public void Hydrate(Sprite sprite, string name, string descriptionText, bool stillClue = false)
     {
         image.sprite = sprite;
         this.objectName.text = name;
@@ -118,9 +124,7 @@ public class DocumentInformationObject : MonoBehaviour
             this.objectDescriptionText.text = RemoveBoldTags(descriptionText);
         }
 
-        nbClueText.text = nbClue.ToString();
         clueButton.interactable = stillClue;
-
     }
 
     public void Hydrate(Sprite sprite, string name, string creator, string date, string descriptionText)
