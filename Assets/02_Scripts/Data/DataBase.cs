@@ -31,8 +31,8 @@ public class DataBase
         var filePath = "data/images/vignettes/" + id;
         var tex = Resources.Load<Texture2D>(filePath);
         if (tex == null) {
-            Debug.LogError("Can't the vignette image for object which id is " + id + ". The expected resource shloud be\"" + filePath + "\". Use a default one to avoid a crash.");
-            tex = Resources.Load<Texture2D>("data/images/vignettes/not_available");
+            Debug.Log("Can't the vignette image for object which id is " + id + ". The expected resource shloud be\"" + filePath + "\". We won't display a vignette for this object.");
+            return null;
         }
 
         // Creates a new Sprite based on the Texture2D
@@ -53,7 +53,10 @@ public class DataBase
             Sprite sprite = LoadSprite(obj.ID);
             sprites.Add(obj.ID, sprite);
             Sprite vignetteSprite = LoadVignetteSprite(obj.ID);
-            vignettesSprites.Add(obj.ID, vignetteSprite);
+            if (vignetteSprite != null)
+            {
+                vignettesSprites.Add(obj.ID, vignetteSprite);
+            }
         }
     }
 }
