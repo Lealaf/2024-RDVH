@@ -29,6 +29,13 @@ public class DocumentInformationObject : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI objectDescriptionText;
 
+    [SerializeField]
+    TextMeshProUGUI nbClueText;
+
+    [SerializeField]
+    Button clueButton;
+
+
     int pageNumber;
 
 
@@ -98,7 +105,7 @@ public class DocumentInformationObject : MonoBehaviour
         return Regex.Replace(input, "<[/]?b>", "");
     }
 
-    public void Hydrate(Sprite sprite, string name, string descriptionText)
+    public void Hydrate(Sprite sprite, string name, string descriptionText, int nbClue = 0, bool stillClue = false)
     {
         image.sprite = sprite;
         this.objectName.text = name;
@@ -110,6 +117,10 @@ public class DocumentInformationObject : MonoBehaviour
         } else {
             this.objectDescriptionText.text = RemoveBoldTags(descriptionText);
         }
+
+        nbClueText.text = nbClue.ToString();
+        clueButton.interactable = stillClue;
+
     }
 
     public void Hydrate(Sprite sprite, string name, string creator, string date, string descriptionText)
