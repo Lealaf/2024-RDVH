@@ -85,7 +85,7 @@ Material:
     - _Metallic: 0.67
     - _Mode: 0
     - _NoiseTiling: 0.43
-    - _Noise_Intensity: 0.47
+    - _Noise_Intensity: 0.26
     - _OcclusionStrength: 1
     - _Opacity: 1
     - _Parallax: 0.02
