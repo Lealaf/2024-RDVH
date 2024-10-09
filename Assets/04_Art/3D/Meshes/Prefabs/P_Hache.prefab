@@ -92,6 +92,7 @@ MonoBehaviour:
   pickupNoise: {fileID: 0}
   interactible: 1
   objectName: Hache
+  rotation: {x: 25, y: 110, z: 40}
 --- !u!1001 &3157576771902873030
 PrefabInstance:
   m_ObjectHideFlags: 0

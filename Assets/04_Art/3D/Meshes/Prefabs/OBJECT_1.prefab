@@ -49,6 +49,7 @@ MonoBehaviour:
   pickupNoise: {fileID: 0}
   interactible: 1
   objectName: OBJECT_1
+  rotation: {x: 20, y: 150, z: -10}
 --- !u!64 &1075509516064674514
 MeshCollider:
   m_ObjectHideFlags: 0

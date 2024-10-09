@@ -71,6 +71,7 @@ MonoBehaviour:
   pickupNoise: {fileID: 0}
   interactible: 1
   objectName: OBJECT_5
+  rotation: {x: -10, y: 300, z: 20}
 --- !u!1001 &458819664745825996
 PrefabInstance:
   m_ObjectHideFlags: 0

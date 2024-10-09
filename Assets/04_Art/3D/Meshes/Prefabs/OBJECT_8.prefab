@@ -46,8 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bef84a1858ae164281ffee5e101a4c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupNoise: {fileID: 0}
   interactible: 1
   objectName: OBJECT_8
+  rotation: {x: 0, y: -45, z: 0}
 --- !u!65 &8557624539706814310
 BoxCollider:
   m_ObjectHideFlags: 0

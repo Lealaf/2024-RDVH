@@ -71,6 +71,7 @@ MonoBehaviour:
   pickupNoise: {fileID: 0}
   interactible: 1
   objectName: OBJECT_4
+  rotation: {x: -5, y: 25, z: 0}
 --- !u!1 &5736400975714378263
 GameObject:
   m_ObjectHideFlags: 0

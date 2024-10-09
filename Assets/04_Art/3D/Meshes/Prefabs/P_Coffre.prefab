@@ -68,8 +68,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bef84a1858ae164281ffee5e101a4c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupNoise: {fileID: 0}
   interactible: 1
   objectName: OBJECT_11
+  rotation: {x: 10, y: 220, z: 15}
 --- !u!1 &3103611339347429720
 GameObject:
   m_ObjectHideFlags: 0
