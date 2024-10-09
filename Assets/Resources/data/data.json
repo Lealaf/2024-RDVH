@@ -29,8 +29,8 @@
             "nom": "Lampe à gaz",
             "description": "L’éclairage au gaz désigne une technique d'éclairage utilisant du <b>gaz manufacturé</b>, qui a transformé <b>l'éclairage urbain à grande échelle</b>, en remplacement des anciennes lampes à huile. Les lampes à gaz installées dans les rues devaient être allumées chaque soir et éteintes chaque matin par les allumeurs de réverbères. \n\nMalgré sa réputation parfois inquiétante, avec des craintes d'incendies ou d'explosions, l'éclairage au gaz s'est rapidement imposé, avant d'être remplacé par la <b>lampe à pétrole </b>et la <b>lampe électrique.</b>",
             "type": "anachronique",
-            "date": "Fin du XVIIIe siècle - début du XIXe siècle",
-            "inventeur": "William Murdoch, Frédéric-Albert Winsor, Philippe Lebon, Jan Pieter Minckelers"
+            "date": "Fin du XVIIIe siècle ",
+            "inventeur": "William Murdoch"
         },
         {
             "ID": "OBJECT_5",
@@ -107,7 +107,7 @@
         {
             "ID": "OBJECT_14",
             "nom": "Le tableau des Époux Arnolfini",
-            "description": "Les Époux Arnolfini est le nom d'une célèbre peinture à l'huile sur bois réalisée par un artiste primitif flamand. Ce tableau est l'un des plus anciens portraits conservés <b>ne représentant pas de scène religieuse</b>. Il montrerait Giovanni Arnolfini, un riche marchand toscan installé à Bruges, et sa femme Giovanna Cenami. Selon certaines hypothèses, le tableau représenterait leur mariage, célébré de manière privée, avec le peintre en témoin.\n\nCe chef-d'œuvre regorge de détails qui illustrent la vie matérielle des riches marchands de la <b>Renaissance</b>: un chandelier, un miroir, des meubles finement sculptés et décorés, ainsi que des tissus somptueux, témoignent du luxe de leur quotidien.",
+            "description": "Les Époux Arnolfini est le nom d'une célèbre peinture à l'huile réalisée par un artiste primitif flamand. Ce tableau est l'un des plus anciens portraits conservés <b>ne représentant pas de scène religieuse</b>. Il montrerait Giovanni Arnolfini, un riche marchand toscan installé à Bruges, et sa femme Giovanna Cenami. Selon certaines hypothèses, le tableau représenterait leur mariage, célébré de manière privée, avec le peintre en témoin.\n\nCe chef-d'œuvre regorge de détails qui illustrent la vie matérielle des riches marchands de la <b>Renaissance</b>: un chandelier, un miroir, des meubles finement sculptés et décorés, ainsi que des tissus somptueux, témoignent du luxe de leur quotidien.",
             "type": "non anachronique",
             "date": "1434",
             "inventeur": "Jan Van Eyck"
