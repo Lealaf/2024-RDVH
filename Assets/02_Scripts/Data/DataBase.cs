@@ -45,6 +45,14 @@ public class DataBase
     {
         data = SaveLoad<AllData>.Load("data/data");
 
+        // Sometime, there is an unexpected and hidden space character at the
+        // beginning or the end of the object type. Trim the string to be robust
+        // to that.
+        foreach (var obj in data.objects)
+        {
+            obj.type = obj.type.Trim();
+        }
+
         // Load and cache all sprites for object images.
         sprites = new Dictionary<string, Sprite>();
         vignettesSprites = new Dictionary<string, Sprite>();

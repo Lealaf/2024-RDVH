@@ -36,7 +36,7 @@
             "ID": "OBJECT_5",
             "nom": "Lunette astronomique",
             "description": "Les lunettes astronomiques sont des instruments conçus pour observer le ciel, permettant de grossir jusqu'à 20 fois la vision normale. Elles se composent d'un tube principal et de deux pièces importantes : l'objectif, qui capte la lumière, et l'oculaire, par lequel on observe. \n\nCe système optique a révolutionné l'astronomie en offrant de nouvelles perspectives sur la Lune, les étoiles et les planètes. Les lunettes astronomiques corroborent l<b>e modèle héliocentrique de Nicolas Copernic </b>qui a mené à une <b>révolution scientifique</b> dans la représentation du monde et de l'Univers.\n",
-            "type": "anachronique ",
+            "type": "anachronique",
             "date": "1609",
             "inventeur": "Galilée"
         },
@@ -76,7 +76,7 @@
             "ID": "OBJECT_10",
             "nom": "Timbre",
             "description": "Le timbre marque l'apparition d'un nouveau système de taxation du courrier, dans lequel l'expéditeur paie les frais d'envoi selon une tarification simplifiée. D'abord instauré en Angleterre, ce système s'est rapidement répandu dans le reste du monde, permettant <b>une réforme postale d'envergure internationale</b>. \n\nGénéralement de forme rectangulaire avec des dentelures, le timbre symbolise l'uniformisation des tarifs postaux sur les <b>territoires nationaux</b>. Les timbres sont devenus de véritables objets d'art, ornés de portraits de souverains, de figures allégoriques ou de symboles nationaux, alliant fonctionnalité et esthétique.",
-            "type": "anachronique ",
+            "type": "anachronique",
             "date": "1839",
             "inventeur": "Rowland Hill, James Chalmers "
         },
