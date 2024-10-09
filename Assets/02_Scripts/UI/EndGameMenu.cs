@@ -74,7 +74,6 @@ public class EndGameMenu : MonoBehaviour
 
             List<Sprite> sprites = new List<Sprite>();
             var sprite = DataBase.vignettesSprites.ContainsKey(id) ? DataBase.vignettesSprites[id] : null;
-            Debug.LogError("TODO");
             if (DataBase.data.objects.Exists(o => o.ID == id))
             {
                 var obj = DataBase.data.objects.Find(o => o.ID == id);

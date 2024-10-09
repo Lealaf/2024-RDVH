@@ -45,6 +45,7 @@ public class ItemResult : MonoBehaviour
             image.sprite = sprite;
             image.enabled = true;
         }
+        image.preserveAspect = true;
 
         good.SetActive(isgood);
         bad.SetActive(!isgood);

@@ -104,6 +104,7 @@ public class DocumentInformationObject : MonoBehaviour
         int clueLevel = GameState.objectsClueLevels[obj.ID];
 
         image.sprite = DataBase.sprites[obj.ID];
+        image.preserveAspect = true;
         this.objectName.text = obj.nom;
         this.objectDescriptionText.text =
             clueLevel >= 1

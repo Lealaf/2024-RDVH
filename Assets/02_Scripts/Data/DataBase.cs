@@ -15,28 +15,21 @@ public class DataBase
     static Sprite LoadSprite(string id)
     {
         var filePath = "data/images/carnet/" + id;
-        var tex = Resources.Load<Texture2D>(filePath);
-        if (tex == null) {
-            Debug.LogError("Can't the image for object which id is " + id + ". The expected resource shloud be\"" + filePath + "\". Use a default one to avoid a crash.");
-            tex = Resources.Load<Texture2D>("data/images/carnet/not_available");
+        Sprite sprite = Resources.Load<Sprite>(filePath);
+        if (sprite == null) {
+            Debug.LogError("Can't the image for object which id is " + id + ". The expected resource shloud be\"" + filePath + "\". Use a default one.");
+            sprite = Resources.Load<Sprite>("data/images/carnet/not_available");
         }
-
-        // Creates a new Sprite based on the Texture2D
-        Sprite sprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100.0f);
-
         return sprite;
     }
     static Sprite LoadVignetteSprite(string id)
     {
         var filePath = "data/images/vignettes/" + id;
-        var tex = Resources.Load<Texture2D>(filePath);
-        if (tex == null) {
+        var sprite = Resources.Load<Sprite>(filePath);
+        if (sprite == null) {
             Debug.Log("Can't the vignette image for object which id is " + id + ". The expected resource shloud be\"" + filePath + "\". We won't display a vignette for this object.");
             return null;
         }
-
-        // Creates a new Sprite based on the Texture2D
-        Sprite sprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100.0f);
 
         return sprite;
     }
