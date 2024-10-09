@@ -62,6 +62,9 @@ public class Viewer : MonoBehaviour
             displayObject.ChangeMatToNormal();
         }
         newObjectInstance.transform.localPosition = Vector3.zero;
+
+        newObjectInstance.transform.rotation = Quaternion.Euler(displayObject.GetViewerRotation());
+
         newObjectInstance.layer = 10;
         foreach (Transform child in newObjectInstance.transform.GetComponentsInChildren<Transform>(true))
         {

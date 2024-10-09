@@ -10,6 +10,9 @@ public class DisplayedObject : MonoBehaviour
     public bool interactible = false;
     public string objectName = NOT_DEFINED;
     const string NOT_DEFINED = "";
+
+    public Vector3 rotation = Vector3.zero;
+
     void Start()
     {
         EventManager.Instance.CollectObject.AddListener(HideMeMaybe);
@@ -69,5 +72,12 @@ public class DisplayedObject : MonoBehaviour
     public void Show()
     {
         gameObject.SetActive(true);
+    }
+
+    // C'est laid mais ca devrais fonctionner pour l'instant.
+    // A voir si il est possible de le calculer en fonction des tailles de mesh
+    public Vector3 GetViewerRotation()
+    {
+        return rotation;
     }
 }
