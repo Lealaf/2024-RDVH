@@ -40,9 +40,7 @@ public class DocumentInformationObject : MonoBehaviour
 
     void Start()
     {
-        EventManager.Instance.CurrentNbCluesUpdated.AddListener(
-            () => nbClueText.text = GameState.currentNbClues.ToString()
-        );
+        EventManager.Instance.CurrentNbCluesUpdated.AddListener(UpdateDisplay);
     }
 
     public void Open()
@@ -81,28 +79,16 @@ public class DocumentInformationObject : MonoBehaviour
                 }
 
                 pageNumber = idPage;
-                ObjectInfo obj = DataBase.data.objects[pageNumber];
-                var sprite = DataBase.sprites[obj.ID];
-                Hydrate(sprite, obj.nom, obj.description);
+                UpdateDisplay();
             }
         }
     }
 
-    public void GoToPage(string id)
-    {
-        ObjectInfo obj;
-        if (DataBase.data.objects.Exists(o => o.ID == id))
-        {
-            obj = DataBase.data.objects.Find(o => o.ID == id);
-        }
-        else
-        {
-            Debug.LogError("Can't find an object which id is " + id + ". Use the first in the list to avoid a crash.");
-            obj = DataBase.data.objects[0];
-        }
 
-        var sprite = DataBase.sprites[obj.ID];
-        Hydrate(sprite, obj.nom, obj.description);
+    public void IncreaseObjectClueLevel()
+    {
+        ObjectInfo currentObject = DataBase.data.objects[pageNumber];
+        GameState.IncreaseObjectClueLevel(currentObject.ID);
     }
 
     public string RemoveBoldTags(string input)
@@ -111,29 +97,32 @@ public class DocumentInformationObject : MonoBehaviour
         return Regex.Replace(input, "<[/]?b>", "");
     }
 
-    public void Hydrate(Sprite sprite, string name, string descriptionText, bool stillClue = false)
+
+    public void UpdateDisplay()
     {
-        image.sprite = sprite;
-        this.objectName.text = name;
-        // C'est ici que ça se passe pour gérer l'affchage des textes en gras en
-        // fonction de l'activation des indices.
-        bool displayBoldText = true;
-        if (displayBoldText) {
-            this.objectDescriptionText.text = descriptionText;
+        ObjectInfo obj = DataBase.data.objects[pageNumber];
+        int clueLevel = GameState.objectsClueLevels[obj.ID];
+
+        image.sprite = DataBase.sprites[obj.ID];
+        this.objectName.text = obj.nom;
+        this.objectDescriptionText.text =
+            clueLevel >= 1
+            ? obj.description
+            : RemoveBoldTags(obj.description);
+        this.creator.text = 
+            clueLevel >= 2
+            ? obj.inventeur
+            : "?!?";
+        this.date.text =  
+            clueLevel >= 3
+            ? obj.date
+            : "?!?";
+
+        nbClueText.text = GameState.currentNbClues.ToString();
+        if (GameState.MaxClueLevelForObject(obj.ID) || GameState.currentNbClues == 0) {
+            clueButton.interactable = false;
         } else {
-            this.objectDescriptionText.text = RemoveBoldTags(descriptionText);
+            clueButton.interactable = true;
         }
-
-        clueButton.interactable = stillClue;
     }
-
-    public void Hydrate(Sprite sprite, string name, string creator, string date, string descriptionText)
-    {
-        this.creator.text = creator;
-        this.date.text = date;
-        Hydrate(sprite, name, descriptionText);
-    }
-
-
-
 }
