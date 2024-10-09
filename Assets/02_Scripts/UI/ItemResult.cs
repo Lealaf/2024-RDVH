@@ -39,15 +39,28 @@ public class ItemResult : MonoBehaviour
     {
         this.nameElem.text = name;
         this.sprite = sprite;
-        image.sprite = sprite;
+        if (sprite == null) {
+            image.enabled = false;
+        } else {
+            image.sprite = sprite;
+            image.enabled = true;
+        }
 
         good.SetActive(isgood);
         bad.SetActive(!isgood);
 
         isGoodAnswer = isgood;
 
+        if (creator == null || creator == "") {
+            creator = "inventeur inconnu";
+        }
         this.creator = creator;
+
+        if (date == null || date == "") {
+            date = "non daté";
+        }
         this.date = date;
+
         this.objectDescriptionText = objectDescriptionText;
     }
 }

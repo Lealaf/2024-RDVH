@@ -105,6 +105,11 @@ public class EndGameMenu : MonoBehaviour
         goodAnswer.SetActive(itemResult.isGoodAnswer);
         badAnswer.SetActive(!itemResult.isGoodAnswer);
 
+        if (itemResult.sprite == null) {
+            imageShow.enabled = false;
+        } else {
+            imageShow.enabled = true;
+        }
         imageShow.sprite = itemResult.sprite;
         objectName.text = itemResult.nameElem.text;
         creator.text = itemResult.creator;
