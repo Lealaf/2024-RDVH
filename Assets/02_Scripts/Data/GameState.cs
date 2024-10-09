@@ -13,7 +13,7 @@ public class GameState
     public static int score = 0;
     public static int nAnachronic = 0;
     public static int nNonAnachronic = 0;
-    public static int maxNbClues = 7;
+    public static int maxNbClues = 15;
     public static int currentNbClues;
     public static int maxClueLevel = 3;
     public static int startingClueLevel = 0;
