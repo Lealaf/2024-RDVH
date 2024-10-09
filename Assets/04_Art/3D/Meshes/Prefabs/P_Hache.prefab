@@ -93,6 +93,7 @@ MonoBehaviour:
   interactible: 1
   objectName: Hache
   rotation: {x: 25, y: 110, z: 40}
+  distance: 1.6
 --- !u!1001 &3157576771902873030
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class DisplayedObject : MonoBehaviour
     const string NOT_DEFINED = "";
 
     public Vector3 rotation = Vector3.zero;
+    public float distance = 0.0f;
 
     void Start()
     {
@@ -79,5 +80,9 @@ public class DisplayedObject : MonoBehaviour
     public Vector3 GetViewerRotation()
     {
         return rotation;
+    }
+    public float GetViewerDistance()
+    {
+        return distance;
     }
 }

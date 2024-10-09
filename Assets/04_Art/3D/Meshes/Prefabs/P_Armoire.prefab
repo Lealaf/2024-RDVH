@@ -71,6 +71,7 @@ MonoBehaviour:
   interactible: 1
   objectName: OBJECT_12
   rotation: {x: 5, y: 220, z: 0}
+  distance: 4
 --- !u!1001 &5195508148720062952
 PrefabInstance:
   m_ObjectHideFlags: 0

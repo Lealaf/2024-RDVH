@@ -324,6 +324,7 @@ MonoBehaviour:
   interactible: 1
   objectName: OBJECT_10
   rotation: {x: 90, y: 0, z: 0}
+  distance: 0.5
 --- !u!1 &5143460328130956172
 GameObject:
   m_ObjectHideFlags: 0

@@ -63,6 +63,8 @@ public class Viewer : MonoBehaviour
         }
         newObjectInstance.transform.localPosition = Vector3.zero;
 
+        gameObjectToRotate.transform.localPosition = new Vector3(0,0,displayObject.GetViewerDistance());
+
         newObjectInstance.transform.rotation = Quaternion.Euler(displayObject.GetViewerRotation());
 
         newObjectInstance.layer = 10;

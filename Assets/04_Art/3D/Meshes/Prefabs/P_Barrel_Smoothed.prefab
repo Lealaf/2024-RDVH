@@ -70,6 +70,8 @@ MonoBehaviour:
   pickupNoise: {fileID: 0}
   interactible: 1
   objectName: Tonneau
+  rotation: {x: 0, y: 0, z: 0}
+  distance: 2
 --- !u!1001 &1894505227758047666
 PrefabInstance:
   m_ObjectHideFlags: 0

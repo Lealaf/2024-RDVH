@@ -501,6 +501,7 @@ MonoBehaviour:
   interactible: 1
   objectName: OBJECT_9
   rotation: {x: 0, y: 255, z: 10}
+  distance: 3
 --- !u!65 &283122366837601993
 BoxCollider:
   m_ObjectHideFlags: 0

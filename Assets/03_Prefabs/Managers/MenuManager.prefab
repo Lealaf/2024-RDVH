@@ -274,6 +274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Viewer
       objectReference: {fileID: 0}
+    - target: {fileID: 4480556508124665905, guid: f006558ed2de4da438ac2a8356f10de8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7806674457793020793, guid: f006558ed2de4da438ac2a8356f10de8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1161.4747
