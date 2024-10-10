@@ -29,7 +29,7 @@ public class InGameMenuManager : MonoBehaviour
 
     public void OpenOptionMenu( bool open)
     {
-        checkMenu.gameObject.SetActive(!open);
+        //checkMenu.gameObject.SetActive(!open);
         exploreMenu.SetActive(!open);
         optionMenu.SetActive(open);
     }
