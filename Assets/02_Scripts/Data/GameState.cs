@@ -128,4 +128,9 @@ public class GameState
             SetCurrentNbClues(currentNbClues - 1);
         }
     }
+
+    public static int GetNbCluesLeft()
+    {
+        return maxNbClues - currentNbClues;
+    }
 }

@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
     {
         List<string> list = new List<string>(GameState.collected);
         Debug.LogError("TODO");
-        MenuManager.Instance.ShowEndMenu(GameState.GetNbAnachronicFound().ToString(), "todo", "todo", GameState.score > 3, list);
+        MenuManager.Instance.ShowEndMenu(GameState.GetNbAnachronicFound().ToString(), (9-GameState.GetNbAnachronicFound()).ToString(), GameState.GetNbCluesLeft().ToString(), GameState.score > 3, list);
     }
 
     public void StartMenu()
