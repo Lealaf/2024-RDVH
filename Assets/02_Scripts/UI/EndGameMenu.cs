@@ -56,6 +56,14 @@ public class EndGameMenu : MonoBehaviour
     public void Hydrate(string nbAnaFound, string remainsToBeFound, string cluesUsed, bool goodScore, List<string> listString)
     {
         this.nbAnaFound.text = nbAnaFound;
+        if(goodScore )
+        {
+            AudioManager.Instance.PlayMusic(AudioManager.music.win);
+        }
+        else
+        {
+            AudioManager.Instance.PlayMusic(AudioManager.music.loss);
+        }
         goodText.SetActive(goodScore);
         badText.SetActive(!goodScore);
 
